@@ -29,7 +29,7 @@ public class MaxSlidingWindowTest {
     @ParameterizedTest
     @MethodSource void
     get_max_of_every_sliding_window(int [] numbers, int windowSize, int[] slidingWindowNumbers){
-        assertThat(maxSlidingWindow.maxSlidingWindowBruteForce(numbers, windowSize)).
+        assertThat(maxSlidingWindow.maxSlidingWindow(numbers, windowSize)).
             isEqualTo(slidingWindowNumbers);
     }
 }
