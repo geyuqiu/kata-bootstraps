@@ -3,7 +3,7 @@
 # solutions to problems
 | #    | Title                                                             | Data Structures etc.                        |
 | :--- | :---------------------------------------------------------------- | :-------------------------------------------|
-| 1    | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                  |
+| 1814 | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                  |
 
 [1814]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountNicePairs.java
 

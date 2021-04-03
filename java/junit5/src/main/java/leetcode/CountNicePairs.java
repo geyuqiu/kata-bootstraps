@@ -17,7 +17,7 @@ public class CountNicePairs { // https://leetcode.com/problems/count-nice-pairs-
         return (int) (count % 1000000007);
     }
 
-    private long sum(int value) { // int will produce overflow
+    long sum(int value) { // int will produce overflow
         return (long) value*(value-1)/2;
     }
 
