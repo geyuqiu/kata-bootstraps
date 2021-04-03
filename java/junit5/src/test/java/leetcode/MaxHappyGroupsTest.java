@@ -18,9 +18,9 @@ class MaxHappyGroupsTest {
 	private static Stream<Arguments>
 	countNicePairs() {
 		return Stream.of(
-//			Arguments.of(4, new int[]{1, 3, 2, 5, 2, 2, 1, 6}, 4),
-//			Arguments.of(3, new int[]{1, 2, 3, 4, 5, 6}, 4),
-//			Arguments.of(3, new int[]{9, 3, 6, 12}, 4), // everyone gets fresh batches
+			Arguments.of(4, new int[]{1, 3, 2, 5, 2, 2, 1, 6}, 4),
+			Arguments.of(3, new int[]{9, 3, 6, 12}, 4), // everyone gets fresh batches
+			Arguments.of(3, new int[]{1, 2, 3, 4, 5, 6}, 4),
 			Arguments.of(4, new int[]{1, 3, 2, 5, 2, 2, 1, 6, 2, 1}, 5)
 		);
 	}
