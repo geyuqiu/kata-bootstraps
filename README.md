@@ -3,11 +3,13 @@
 # solutions to problems
 | #    | Title                                                             | Data Structures etc.                        |
 | :--- | :---------------------------------------------------------------- | :-------------------------------------------|
-| 1670 | [FrontMiddleBackQueue][1670]                                      |                                   |
+| 1670 | [front-middle-back-queue][1670]                                   |                                           |
+| 1684 | [CountConsistentStrings][1684]                                    | Hash Table                                  |
 | 1813 | [are-sentences-similar][1813]                                     | LinkedList                                  |
 | 1814 | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                  |
 
 [1670]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FrontMiddleBackQueue.java
+[1684]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountConsistentStrings.java
 [1814]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountNicePairs.java
 [1813]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/AreSentencesSimilar.java
 

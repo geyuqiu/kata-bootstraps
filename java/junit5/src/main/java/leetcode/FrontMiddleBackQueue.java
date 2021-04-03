@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author YUQIU
  */
-public class FrontMiddleBackQueue {
+public class FrontMiddleBackQueue { // https://leetcode.com/problems/design-front-middle-back-queue/
 	List<Integer> frontMiddleBackQueue = new ArrayList<>();
 
 	public void pushFront(int val) {
