@@ -3,9 +3,11 @@
 # solutions to problems
 | #    | Title                                                             | Data Structures etc.                        |
 | :--- | :---------------------------------------------------------------- | :-------------------------------------------|
-| 1813 | [count-nice-pairs-in-an-array][1813]                              | LinkedList                                  |
+| 1670 | [FrontMiddleBackQueue][1670]                                      |                                   |
+| 1813 | [are-sentences-similar][1813]                                     | LinkedList                                  |
 | 1814 | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                  |
 
+[1670]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FrontMiddleBackQueue.java
 [1814]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountNicePairs.java
 [1813]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/AreSentencesSimilar.java
 
