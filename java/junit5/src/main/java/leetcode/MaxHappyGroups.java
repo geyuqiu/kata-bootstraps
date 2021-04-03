@@ -7,28 +7,36 @@ public class MaxHappyGroups { // https://leetcode.com/problems/maximum-number-of
     int maxHappyGroupsBruteForce(int batchSize, int[] groups) {
         if (groups.length == 0) return 0;
         Map<Integer, Integer> map = new HashMap<>();
+        int counter = 0;
+
         for (int g: groups) {
-            if (g % batchSize != 0) {
-                if (map.containsKey(g)) {
-                    map.replace(g, map.get(g) + 1);
+            int rem = g % batchSize;
+            if (rem != 0) {
+                if (map.containsKey(rem)) {
+                    map.replace(rem, map.get(rem) + 1);
                 } else {
-                    map.put(g, 1);
+                    map.put(rem, 1);
                 }
+            } else {
+                counter ++;
             }
         }
 
-        int counter = groups.length - map.size();
+        counter = dfs(batchSize, map, counter);
 
+        return counter;
+    }
+
+    private int dfs(int batchSize, Map<Integer, Integer> map, int counter) {
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             int complement = findComplement(map, entry.getKey(), batchSize);
             if (complement > 0 && entry.getValue() > 0) {
                 map.replace(entry.getKey(), entry.getValue() - 1);
-                map.replace(complement, entry.getValue() - 1);
+                map.replace(complement, map.get(complement) - 1);
                 counter++;
             }
         }
-
-        return counter;
+        return dfs(batchSize, map, counter);
     }
 
     private int findComplement(Map<Integer, Integer> map, Integer entryKey, int batchSize) {
