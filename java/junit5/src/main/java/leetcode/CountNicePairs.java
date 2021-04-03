@@ -25,7 +25,7 @@ public class CountNicePairs { // https://leetcode.com/problems/count-nice-pairs-
         return Integer.parseInt(new StringBuilder(String.valueOf(num)).reverse().toString());
     }
 
-    int countNicePairsTooSlow(int[] nums) { // O(n^2) brute force too slow
+    int countNicePairsBruteForce(int[] nums) { // O(n^2) too slow
         int result = 0;
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
