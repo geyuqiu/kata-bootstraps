@@ -10,7 +10,7 @@ public class MaxSlidingWindow { // https://leetcode.com/problems/sliding-window-
 
         Deque<Integer> indexDeQue = new LinkedList<>(); // first element: nums[indexDeQue.getFirst()] always the max
 
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < length; i++) { // insertion and deletion on deque all O(1): https://www.bigocheatsheet.com/
             // 1. adapt to window size (remove 0. element) if i-k = head = 0 for [7,4,5,6]
             if (!indexDeQue.isEmpty() && i - k == indexDeQue.getFirst()) {
                 indexDeQue.removeFirst();
