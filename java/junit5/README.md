@@ -1,25 +1,239 @@
-# Java JUnit5
+# crackingTheCodingInterviewBook
+current progress: p. 99
 
-A minimal setup with Java [JUnit5](https://junit.org/junit5/) to get you started.
+chapters to skip: 
+* chapter 12: 158 - 163
 
-You can use [gradle](https://gradle.org/) or [maven](https://maven.apache.org/)
+## how to steps
+* listen carefully for **CLUES**, all clues must be there to provide the optimal solutions
+    * sorted
+    * repeatedly --> think about caching
+* Talk out loud, show what you think (when screen sharing use oneNote e.g.): like writing jira tickets, defining AK, asking about uncertainties
+    * give opportunity to evaluate your thought process: give headlines when being quiet
+    * the interview is on your side
+    * communication skills
+    * stumbling and struggling is normal
+    * if writing code on a white Board: use the long variable first and then make if short 
+* draw a (complex enough) example (frame/visualize what you understood in your own words)
+    * try to avoid special cases
+* explain a **brute force** asap (not code it), slow but works, stating time and space complexity
+    * **data structure brainstorm**: e.g. LinkedList, HashMap etc.
+    * if brute force not possible, have there been any similar algorithms before that was solved
+    * makes sense if misheard the concept / task
+    * state the runtime: O()
+    * e.g. count the intersection of 2 **sorted**, **distinct** lists
+        * [1,12,15,19,20,21]
+        * [2,15,17,19,21,25,27]
+        * brute force: for each item in the first list, 
+        try to find the same item in the second list, 
+        if so increment the intersection variable,
+        this will take O(A*B)
+* Optimize
+    * any unused info, switch example 
+    * Ideally, you want a question that has a series of hurdles, insights, or optimizations. 
+        Multiple data points beat a single data point.
+    * **BUD**: 
+        * **B**ottlenecks: max complexity factor, e.g. O(nlogn) over O(n), 
+        as the bottlenecks could change while getting from brute-force to an end algorithm
+        * **u**nnecessary work: Print all positive integer solutions to the equation:
+        a<sup>3</sup> + b<sup>3</sup> = c<sup>3</sup> + d<sup>3</sup> where a, b, c, and d are integers between 1 and 1000 
+            * brute force O(n<sup>4</sup>)
+            * add break
+            * do: pow(a<sup>3</sup> + b<sup>3</sup> - c<sup>3</sup>, 1/3)
+            * precompute `(c, d)` pair into hashtable, maps from sum to the list of pairs that have that sum: `HashMap<Integer, Pair<Integer, Integer>>` with O(n<sup>2</sup>) 
+            * `(c, d)` pairs are computed for `(a, b)`: O(n<sup>2</sup>) 
+        * **d**uplicated work
+            * throw values in B in **hashset** (preparation): look up time O(1) --> runtime overall: 
+                O(A+B) runtime, O(B) space complexity
+            * binary search on B: O(log B) runtime, O(1) space complexity
+            * use sorted as not yet used criteria and walk through A and B with two pointers (linear search): similar to merging these 2 sorted arrays:
+                O(A+B) runtime, O(1) space complexity
+    * Space and time **trade-offs**
+        * more space complexity with pre-computations
+    * simplify, generalize with multi-step approach
+        * simplify: word -> string,    
+    * Do it yourself (solve it like a 12 year old and reverse engineer it)
+        * or find out similar problems that was done before, implement it first and start from there
+        * find permutations of s within b
+            * s = abbc
+            * b = cbabadcbbabbcbabaabccbabc
+            * brute force: find all permutations (S!) * look for each in b (B)
+            * optimisation:
+                * Walk through b and look at sliding windows of 4 characters (since s has length 4). Check if each window is a permutation of s
+                * Walk through b.Every time you see a character ins, check if the next four(the length ofs) characters
+                  are a permutation ofs.
+                * O(B*S) 
+        * binary search
+            * search name in a dictionary without knowing the exact place of e.g. S, as a real world metaphor for binary search
+    * recursion: base case and build
+    * reuse variables, methods
+    * export methods (modularity), not squashed in a huge one
+    * combine with Best Conceivable Runtime (BCR) e.g. O(n)
+        * Any work you do that's less than or equal to the BCR is **free**
+        * optimize runtime and then space complexity one by one in order to get Best Conceivable Runtime in both complexity
+* walk through / picture your data structures and variables and when they change
 
-[More complicated JUnit5 setups](https://github.com/junit-team/junit5-samples)
+## writing code: 
 
-## Setup
+* write pseudo code as comments so that you don't forget everything that you thought of
+* write code on paper / leetcode
+* test n SMALL cases including 
+    * edge cases
+* type paper code into ide with unit tests: note down the mistakes that are discovered by ide syntax highlighting, compiler and while debugging and keep them as a list 
+* techniques
+    * write `initIncrementalMatrix(int size)` and fill in the details later
+    * use 2-dim array for start and end points or a sophisticated class (better than using StartEndPair)
+    * use descriptive method/variable names, but abbreviate it after 1. usage with explanation, and mentions place that should be refactored
+    *  
+## interview preparation grid
 
-    git clone https://github.com/swkBerlin/kata-bootstraps
-    cd java/junit5
+* answer questions by mentioning: `I` instead of `We`
+* give structured answers
+    * nugget (gist) first
+    * SAR 
+        * **Situation**: On my operating systems project, I was assigned to work with three other people. While two were great, the third team member didn't contribute much. He stayed quiet during meetings, rarely chipped in during email discussions, and struggled to complete his components. This was an issue not only because it shifted more work onto us, but also because we didn't know if we could count on him.
+        * **Action**: (make it several steps, In almost all cases, the "action" is the most important part of the story. Unfortunately, far too many people talk on and on about the situation, but then just breeze through the action. ) I didn't want to write him off completely yet, so I tried to resolve the situation. I did three things.
+            * First, I wanted to understand why he was acting like this. Was it laziness? Was he busy with something else? I struck up a conversation with him and then asked him open-ended questions about how he felt it was going. Interestingly, basically out of nowhere, he said that he wanted to take on the writeup, which is one of the most time intensive parts. This showed me that it wasn't laziness; it was that he didn't feel like he was good enough to write code.
+            * Second, now that I understand the cause, I tried to make it clear that he shouldn't fear messing up. I told him about some of the bigger mistakes that I made and admitted that I wasn't clear about a lot of parts of the project either.
+            * Third and finally, I asked him to help me with breaking out some of the components of the project. We sat down together and designed a thorough spec for one of the big component, in much more detail than we had before. Once he could see all the pieces, it helped show him that the project wasn't as scary as he'd assumed. 
+        * **Result**: With his confidence raised, he now offered to take on a bunch of the smaller coding work, and then eventually some of the biggest parts. He finished all his work on time, and he contributed more in discussions. We were happy to work with him on a future project.
+    * What personality attributes has the candidate demonstrated?
+      * **Initiative/Leadership**: The candidate tried to resolve the situation by addressing it head-on. 
+      * **Empathy**: The candidate tried to understand what was happening to the person. The candidate also
+        showed empathy in knowing what would resolve the teammate's insecurity.
+      * **Compassion**: Although the teammate was harming the team, the candidate wasn't angry at the teammate. His empathy led him to compassion.
+      * **Humility**: The candidate was able to admit to his own flaws (not only to the teammate, but also to the interviewer).
+      * **Teamwork/Helpfulness**: The candidate worked with the teammate to break down the project into manageable chunks.
 
-Open as preexisting project in your favorite IDE and choose between gradle or maven nature
+|  Common Questions  |    Allianz Project      |  Ionic | 
+|----------|:-------------:|------:|
+| `Challenges` | keep focus because of multiple assets, adding strong test pyramid, because no tests and ci whatsoever  | coach team in unit testing, because no tests and ci whatsoever | 
+| `Mistakes/Failures` | communication skills especially with non technical stakeholders | manager did not like unthorough work (pixel perfect) |   
+| `Enjoyed` |  coaching of the team regarding agile software development, pair programming   | coaching and adding unit tests |  
+| `Leadership` |  how the senior led the team, try to assimilate/understand what/why he did  | coaching and state the importance of test pyramid | 
+| `Conflicts` |  more documentation  |  priorities of tests vs code guidelines like (tab vs space)  |  
+| `technical decisions && tradeoffs` |    |       |   
+| `What you'd do differently` |    |  be more patient and kind to address problems and introduce change to a team  | 
 
-## Running Tests
+## how to ask questions
 
-To execute the tests either run `./gradlew test`, `mvn test` or run the tests from the IDE you are using
+* Genuine Questions
+    * What is the ratio of testers to developers to program managers? What is the interaction like? How does
+project planning happen on the team?"
+    * What brought you to this company? What has been most challenging for you?
+* Insightful Questions
+    * I noticed that you use technology X. How do you handle problem Y?
+    * Why did the product choose to use the X protocol over the Y protocol? I know it has benefits like A,B, C, 
+    but many companies choose not to use it because of issue D
 
-## Test Libraries Available from the Get-Go
-- JUnit 5.5.2
+* Passion Questions
+    * I'm very interested in scalability, and I'd love to learn more about it. What opportunities are there at this company to learn about this?
+    * I'm not familiar with technology X,but it sounds like a very interesting solution. Could you tell me a bit more about how it works?
 
-This repo was tested with eclipse and idea, if you encounter problems please open a issue or send a pull request.
+## powers of 2: 
 
-Have fun!
+* 2<sup>10</sup> =  10<sup>3</sup> = 1KB
+* 2<sup>20</sup> =  10<sup>6</sup> = 1MB
+* 2<sup>30</sup> =  10<sup>9</sup> = 1GB
+* 2<sup>40</sup> =  10<sup>12</sup> = 1TB
+
+## Big-O
+* https://www.bigocheatsheet.com/
+* recursion in n steps takes O(n) space: adds a level to the call stack, occupies memory
+* hidden runtime
+    * O(1), but also O(n): reallocation of a new arrayList while doubling capacity after running out of space
+    * O(n): for String concatenation, e.g. str1 + str2
+    * 
+* Example: an algorithm that took in an array (array length: **a**) of strings (longest string length: **s**), 
+sorted each string, and then sorted the full array. 
+What would the runtime be ?
+    * sort each string: **O(s log s)**
+    * do this for s strings, so that's **O(a * s log s)**
+    * sort full array while comparing the strings O(s): **O( a * s log a)** because of O(a log a)comparisons
+    * sum: O(a * s log s) + O( a * s log a) = O(a*s(log a + log s))
+
+### typical big o runtime: 
+* isPrime: `O (sqrt n)`
+* factorial: n! -> `O(n)`
+* fibonacci without memoization: O(2<sup>n</sup>) or O(1.6<sup>n</sup>): at the bottom of the call stack,there is sometimes only one call. 
+* fibonacci with memoization (iterative / recursive): `O(n)`
+* get all permutations of a string: **O(n * n * n!)** including string concatenation
+
+        
+    void permutation (String str) {
+        permutation(str, "");
+    }
+
+    void permutation(String str, String prefix) { // move character per character from str to prefix (permutation results)
+        if(str.length() == 0) {
+            System.out.println(prefix);
+        } else {
+            for (int i = 0; i < str.length(); i++) {
+                char cToBeRemoved = str.charAt(i);
+                String strWithCRemoved = str.substring(0, i) + str.substring(i+1);
+                permutation(strWithCRemoved, prefix + cToBeRemoved);
+            }
+        }
+    }
+        
+* print all powers of 2 that are below n: `O(log n)`
+
+
+    int powers0f2(int n) {
+        if (n < 1) {
+            return 0;
+        } else if (n == 1) {
+            System.out.println(l);
+            return 1;
+        } else {
+            int prev = powers0f2(n / 2); // base case minimum 1
+            int curr = prev * 2; 
+            System.out.println(curr); 
+            return curr;
+        } 
+    }
+
+## how to introduce yourself
+* highlights 
+* the way you tell it, e.g. running marathon (persistent, hard) etc.
+* how you work and how could you have done it better
+* architectural decisions why did you choose that framework / technology
+* lead/drive through the problems but involve the interviewer
+* do not be mentally lazy
+
+## Solve live coding interview
+
+interviews are on your side,
+see if you have strong problem solving skills,
+regularly do coding on whiteboard,
+keep trying when you are stuck, pay attention to what the interview is saying
+* rotate matrix: 
+    * clock vs counter clock
+    * in-place vs using additional memory to save the matrix / intermediate solutions
+    * n*n right (square)?
+* Talk out loud: like writing jira tickets, defining AK
+    * give opportunity to evaluate your thought process: give headlines when being quiet
+    * rotate layer by layer, starting by outer most layer
+    * four-way-swap
+    * cell by cell rotation
+* debug with couples of test cases manually on whiteboard
+
+## doubts about the book
+
+* These complaints aren't without merit: 
+    * answer/solution can be found by googling
+    * rarely have to use data structures such as binary search trees in the real world
+    * whiteboard coding: artificial env, would never code on whiteboard in real world, but java 8 did indicate that for beginner, this is a good way to learn ;) 
+* but 
+    * From the company's perspective, it's actually acceptable that some good candidates are rejected. (acceptaable tradeoff)
+    * Problem-solving skills are valuable
+    * Basic data structure and algorithm knowledge is useful.
+    * not a perfect process, all interview processes have their downsides, you may only mix the tasks
+        * buzzword bingo, cracking the code interview, introduction, Alpen-Case, Angular-Case, design questions
+
+## evaluate perks
+* One Time Perks: Signing Bonus, Relocation
+* Cost ofLiving Difference: Silicon Valley vs Seattle
+* Annual Bonus
+* Stock Options
+* career path
