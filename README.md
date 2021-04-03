@@ -3,9 +3,11 @@
 # solutions to problems
 | #    | Title                                                             | Data Structures etc.                        |
 | :--- | :---------------------------------------------------------------- | :-------------------------------------------|
+| 1813 | [count-nice-pairs-in-an-array][1813]                              | LinkedList                                  |
 | 1814 | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                  |
 
 [1814]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountNicePairs.java
+[1813]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/AreSentencesSimilar.java
 
 # current progress: 
 p. 99
