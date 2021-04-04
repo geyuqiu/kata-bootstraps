@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-// understand the recursive solution here https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java first :)
+// understand this recursive solution here https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java first :)
 public class MaxHappyGroups { // https://leetcode.com/problems/maximum-number-of-groups-getting-fresh-donuts/
-    Map<String, Integer> modRemaindersCounter = new HashMap<>();
+    Map<String, Integer> modRemaindersCounter = new HashMap<>();  // TLE without dp
 
 	int maxHappyGroups(int batchSize, int[] groups) { // time and space: O((G/K)^K*K), B = K/2
         int[] remaindersCounter = new int[batchSize];
@@ -46,6 +46,5 @@ public class MaxHappyGroups { // https://leetcode.com/problems/maximum-number-of
 		modRemaindersCounter.put(key, mod);
 		return mod;
     }
-	// exponential complexity without dp
 }
 

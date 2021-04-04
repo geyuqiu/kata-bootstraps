@@ -4,16 +4,20 @@
 | #    | Title                                                             | Data Structures etc.                        |
 | :--- | :---------------------------------------------------------------- | :-------------------------------------------|
 |  239 | [max-sliding-window][239]                                         | LinkedList, efficiency                      |
-| 1670 | [front-middle-back-queue][1670]                                   |                                           |
+| 1670 | [front-middle-back-queue][1670]                                   |                                             |
 | 1684 | [CountConsistentStrings][1684]                                    | Hash Table                                  |
 | 1813 | [are-sentences-similar][1813]                                     | LinkedList                                  |
 | 1814 | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                  |
+| 1815 | [max-happy-groups][1815]                                          | dfs, dp                                     |
+|      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                         |
 
+[listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
 [239]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java
 [1670]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FrontMiddleBackQueue.java
 [1684]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountConsistentStrings.java
-[1814]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountNicePairs.java
 [1813]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/AreSentencesSimilar.java
+[1814]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountNicePairs.java
+[1815]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxHappyGroups.java
 
 # current progress: 
 p. 99
