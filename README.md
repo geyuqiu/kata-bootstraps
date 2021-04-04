@@ -3,7 +3,7 @@
 # solutions to problems
 | #    | Title                                                             | Data Structures etc.                        |
 | :--- | :---------------------------------------------------------------- | :-------------------------------------------|
-|  239 | [max-sliding-window][239]                                         | LinkedList, efficiency                      |
+|  239 | [max-sliding-window][239]                                         | LinkedList                      |
 | 1670 | [front-middle-back-queue][1670]                                   |                                             |
 | 1684 | [CountConsistentStrings][1684]                                    | Hash Table                                  |
 | 1813 | [are-sentences-similar][1813]                                     | LinkedList                                  |
@@ -49,8 +49,8 @@ chapters to skip:
         try to find the same item in the second list, 
         if so increment the intersection variable,
         this will take O(A*B)
-* Optimize
-    * any unused info, switch example 
+* **Optimize**:
+    * mostly for medium or hard leetcode problems
     * Ideally, you want a question that has a series of hurdles, insights, or optimizations. 
         Multiple data points beat a single data point.
     * **BUD**: 
