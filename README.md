@@ -99,13 +99,23 @@ chapters to skip:
         * optimize runtime and then space complexity one by one in order to get Best Conceivable Runtime in both complexity
 * walk through / picture your data structures and variables and when they change
 
-## writing code: 
+## before and during writing code: 
 
 * write pseudo code as comments so that you don't forget everything that you thought of
 * write code on paper / leetcode
 * test n SMALL cases including 
     * edge cases
-* type paper code into ide with unit tests: note down the mistakes that are discovered by ide syntax highlighting, compiler and while debugging and keep them as a list 
+* type paper code into ide with unit tests:
+note down the mistakes that are discovered by ide syntax highlighting, compiler and while debugging and keep them as a list
+    * not using all given function params 
+    * not using all given conditions 
+    * Integer overflow while multiplying `10^9` with `10^9`
+    * **begins coding too early** before completing data structure brainstorm and though about every steps along the way
+        * not understanding every detail of the problem
+        * used the wrong data structure
+        * not checking edge cases
+    * unfamiliar about java stream methods, conversion between array, list and stream etc.
+    * not making code modular 
 * techniques
     * write `initIncrementalMatrix(int size)` and fill in the details later
     * use 2-dim array for start and end points or a sophisticated class (better than using StartEndPair)
