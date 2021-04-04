@@ -255,4 +255,5 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Maven
+        working-directory: java/junit5
         run: mvn --batch-mode --update-snapshots verify
