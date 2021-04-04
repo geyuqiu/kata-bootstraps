@@ -16,12 +16,12 @@ public class PermuteUnique { // https://leetcode.com/problems/permutations-ii/
 		chosen = new boolean[n];
 		for (int i = 0; i < n; i++) chosen[i] = false;
 
-		dfs(nums);
+		backtracking(nums);
 
 		return result;
 	}
-	void dfs(int[] nums) {
-		System.out.println("dfs");
+
+	void backtracking(int[] nums) {
 		if (permutation.size() == nums.length) {
 			List copy = new ArrayList<Integer>();
 			copy.addAll(permutation);
@@ -31,7 +31,7 @@ public class PermuteUnique { // https://leetcode.com/problems/permutations-ii/
 				if (chosen[i]) continue;
 				chosen[i] = true;
 				permutation.add(nums[i]);
-				dfs(nums);
+				backtracking(nums);
 				chosen[i] = false;
 				permutation.remove(permutation.size() - 1);
 			}

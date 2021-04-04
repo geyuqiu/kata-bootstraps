@@ -13,20 +13,20 @@ public class Subsets { // https://leetcode.com/problems/subsets/solution/
 	public List<List<Integer>> subsets(int[] nums) { // time: O(2^n), space O(n)
 		int n = nums.length;
 
-		dfs(nums, 0);
+		backtracking(nums, 0);
 
 		return result;
 	}
 
-	void dfs(int[] nums, int pos) {
+	void backtracking(int[] nums, int pos) {
 		if (pos == nums.length) {
 			List copy = new ArrayList<Integer>();
 			copy.addAll(subset);
 			if (!result.contains(copy)) result.add(copy);
 		} else {
-			dfs(nums, pos + 1);
+			backtracking(nums, pos + 1);
 			subset.add(nums[pos]);
-			dfs(nums, pos + 1);
+			backtracking(nums, pos + 1);
 			subset.remove(subset.size() - 1);
 		}
 	}
