@@ -10,18 +10,22 @@ public class MaxHappyGroups { // https://leetcode.com/problems/maximum-number-of
 
 	int maxHappyGroups(int batchSize, int[] groups) { // time and space: O((G/K)^K*K), B = K/2
         int[] remaindersCounter = new int[batchSize];
+        int numOfGroups = 0;
         for (int numOfCustomer : groups) {
             remaindersCounter[numOfCustomer % batchSize]++;
+            numOfGroups++;
         }
+
         int happyGroups = remaindersCounter[0];
+        numOfGroups -= happyGroups;
         remaindersCounter[0] = 0; // start dfs from 1
-        int ans = remaindersPermutations(0, remaindersCounter);
+        int ans = remaindersPermutations(0, remaindersCounter, numOfGroups);
 
         return ans + happyGroups;
     }
 
-    int remaindersPermutations(int mod, int[] remaindersCounter) {
-		if (checkBaseCase(remaindersCounter)) return 0;
+    int remaindersPermutations(int mod, int[] remaindersCounter, int numOfGroups) {
+		if (numOfGroups == 0) return 0;
 
 		String key = mod +"," + Arrays.toString(remaindersCounter);
 		if (modRemaindersCounter.containsKey(key)) {
@@ -32,9 +36,9 @@ public class MaxHappyGroups { // https://leetcode.com/problems/maximum-number-of
         int max = 0;
         for (int i = 1; i < remaindersCounter.length; i++) {
             if (remaindersCounter[i] > 0) {
-                remaindersCounter[i]--;
-                max = Math.max(max, remaindersPermutations((mod + i) % remaindersCounter.length, remaindersCounter));
-                remaindersCounter[i]++;
+                remaindersCounter[i]--; numOfGroups--;
+                max = Math.max(max, remaindersPermutations((mod + i) % remaindersCounter.length, remaindersCounter, numOfGroups));
+                remaindersCounter[i]++; numOfGroups++;
             }
         }
 
@@ -42,15 +46,6 @@ public class MaxHappyGroups { // https://leetcode.com/problems/maximum-number-of
 		modRemaindersCounter.put(key, mod);
 		return mod;
     }
-
-	private boolean checkBaseCase(int[] remainders) {
-		for (int i = 1; i < remainders.length; i++) {
-			if (remainders[i] != 0) {
-				return false;
-			}
-		}
-		return true;
-	}
 	// exponential complexity without dp
 }
 
