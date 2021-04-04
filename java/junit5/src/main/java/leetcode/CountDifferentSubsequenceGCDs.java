@@ -9,55 +9,37 @@ import java.util.Set;
  * @author YUQIU
  */
 public class CountDifferentSubsequenceGCDs { // https://leetcode.com/problems/number-of-different-subsequences-gcds/
-	// 1 <= nums.length <= 105
-	// 1 <= nums[i] <= 2 * 105
-	int countDifferentSubsequenceGCDsBruteforce(int[] nums) { // time: O(2^n * n * log(n))
+	// 1 <= nums.length <= 10^5
+	// 1 <= nums[i] <= 2 * 10^5
+	int countDifferentSubsequenceGCDs(int[] nums) { // time: O(2^n * n * log(n))
 
 		Set<Integer> gcds = new HashSet<>();
 
-		List<List<Integer>> subsets = subsets(nums);
-		for (List<Integer> subset: subsets) {
-			gcds.add(gcd(subset));
+		int max = 0;
+		for (int n: nums) {
+			max = Math.max(n, max);
+			gcds.add(n);
 		}
+		max = Math.min(max, 10000);
+
+		for (int i = 0; i < max; i++) { // 0 -> % 1,  max-1 -> % max,
+			int gcd = i + 1;
+			if (!gcds.contains(gcd)) {
+				if (checkIfAtLeast2DivisableBy(gcd, nums)) {
+					gcds.add(gcd);
+				}
+			}
+		}
+
 		return gcds.size();
 	}
 
-	int gcd(List<Integer> nums) { // O(n * log(s)), s being the smallest number of nums
-		int result = nums.get(0); // associativity: gcd(a,b,c,d) = gcd(gcd(gcd(a,b),c),d)
-		for (int i = 1; i < nums.size(); i++) {
-			result = gcd(result, nums.get(i));
-
-			if (result == 1) return 1;
+	private boolean checkIfAtLeast2DivisableBy(int gcd, int[] nums) {
+		int counter = 0;
+		for (int n: nums) {
+			if (n % gcd == 0) counter++;
+			if (counter > 1) return true;
 		}
-		return result;
-	}
-
-	int gcd(int a, int b) { // O(log(a+b))
-		if (a % b == 0) return b;
-		else return gcd(b, a % b);
-	}
-
-	List<List<Integer>> result = new ArrayList<>();
-	List<Integer> subset = new ArrayList<>();
-
-	public List<List<Integer>> subsets(int[] nums) { // time: O(2^n), space O(n)
-		int n = nums.length;
-
-		backtracking(nums, 0);
-
-		return result;
-	}
-
-	void backtracking(int[] nums, int pos) {
-		if (pos == nums.length) {
-			List copy = new ArrayList<Integer>();
-			copy.addAll(subset);
-			if (!result.contains(copy) && !copy.isEmpty()) result.add(copy);
-		} else {
-			backtracking(nums, pos + 1);
-			subset.add(nums[pos]);
-			backtracking(nums, pos + 1);
-			subset.remove(subset.size() - 1);
-		}
+		return false;
 	}
 }
