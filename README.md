@@ -1,5 +1,8 @@
 # crackingTheCodingInterviewBook
 
+Following is my notes and source code when reading crackingTheCodingInterviewBook 
+and practicing mostly on platforms like Leetcode.
+
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                        |
 | :--- | :---------------------------------------------------------------- | :-------------------------------------------|
@@ -39,7 +42,7 @@ chapters to skip:
     * if writing code on a white Board: use the long variable first and then make if short 
 * draw a (complex enough) example (frame/visualize what you understood in your own words)
     * try to avoid special cases
-* explain a **brute force** asap (not code it), slow but works, stating time and space complexity
+* explain a **brute force** asap (not code it), slow but works, **stating time and space complexity**
     * **data structure brainstorm**: e.g. LinkedList, HashMap etc.
     * if brute force not possible, have there been any similar algorithms before that was solved
     * makes sense if misheard the concept / task
@@ -255,8 +258,19 @@ keep trying when you are stuck, pay attention to what the interview is saying
         * buzzword bingo, cracking the code interview, introduction, Alpen-Case, Angular-Case, design questions
 
 ## evaluate perks
-* One Time Perks: Signing Bonus, Relocation
-* Cost ofLiving Difference: Silicon Valley vs Seattle
-* Annual Bonus
-* Stock Options
-* career path
+* compensation
+    * One Time Perks: Signing Bonus, Relocation
+    * Cost of Living Difference: Silicon Valley vs Seattle
+    * Annual Bonus
+    * Stock Options
+* career develepment
+    * path to senior (promotion plan), "cash" support for certifications, mentoring
+* working env
+    * remote friendly
+        * if on-site: If I do want to leave the company, is it situated near other companies I'm interested in, or will I need to move
+    * home office support: phone, hardware, computer, sim card etc.
+    * full time
+* company/DEV culture
+    * QA / TDD
+    * Full Stack
+    * How good does the company's name look on my resume: vs FANG company
