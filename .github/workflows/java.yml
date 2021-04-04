@@ -34,6 +34,8 @@ jobs:
 
   mvn_verify:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
       - name: Build junit5 with Maven
         working-directory: java/junit5
         run: mvn --batch-mode --update-snapshots verify
