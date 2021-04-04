@@ -6,7 +6,8 @@ and practicing mostly on platforms like Leetcode.
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                       |
 | :--- | :---------------------------------------------------------------- | :------------------------------------------|
-|  47  | [PermuteUnique][47]                                               | dfs                                        |
+|  78  | [Subsets][78]                                               | backtracking                                        |
+|  47  | [PermuteUnique][47]                                               | backtracking                                        |
 |  239 | [max-sliding-window][239]                                         | LinkedList                                 |
 | 1670 | [front-middle-back-queue][1670]                                   |                                            |
 | 1684 | [CountConsistentStrings][1684]                                    | Hash Table                                 |
@@ -21,6 +22,7 @@ and practicing mostly on platforms like Leetcode.
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
 [47]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/PermuteUnique.java
+[78]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Subsets.java
 [239]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java
 [1670]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FrontMiddleBackQueue.java
 [1684]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountConsistentStrings.java

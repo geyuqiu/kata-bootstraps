@@ -7,7 +7,7 @@ import java.util.List;
  * @author YUQIU
  */
 public class PermuteUnique { // https://leetcode.com/problems/permutations-ii/
-	boolean[] chosen;
+	boolean[] chosen; // https://leetcode.com/explore/learn/card/recursion-ii/472/backtracking/2793/
 	List<List<Integer>> result = new ArrayList<>();
 	List<Integer> permutation = new ArrayList<>();
 
