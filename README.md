@@ -4,18 +4,18 @@ Following is my notes and source code when reading crackingTheCodingInterviewBoo
 and practicing mostly on platforms like Leetcode.
 
 ## solutions to problems
-| #    | Title                                                             | Data Structures etc.                        |
-| :--- | :---------------------------------------------------------------- | :-------------------------------------------|
-|  239 | [max-sliding-window][239]                                         | LinkedList                      |
-| 1670 | [front-middle-back-queue][1670]                                   |                                             |
-| 1684 | [CountConsistentStrings][1684]                                    | Hash Table                                  |
-| 1812 | [square-is-white][1812]                                            |                                   |
-| 1813 | [are-sentences-similar][1813]                                     | LinkedList                                  |
-| 1814 | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                  |
-| 1815 | [max-happy-groups][1815]                                          | dfs, dp                                     |
-| 1816 | [truncate-sentence][1816]                                          |                                    |
-| 1817 | [FindingUsersActiveMinutes][1817]                                  |                                    |
-|      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                         |
+| #    | Title                                                             | Data Structures etc.                       |
+| :--- | :---------------------------------------------------------------- | :------------------------------------------|
+|  239 | [max-sliding-window][239]                                         | LinkedList                                 |
+| 1670 | [front-middle-back-queue][1670]                                   |                                            |
+| 1684 | [CountConsistentStrings][1684]                                    | Hash Table                                 |
+| 1812 | [square-is-white][1812]                                           |                                            |
+| 1813 | [are-sentences-similar][1813]                                     | LinkedList                                 |
+| 1814 | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                 |
+| 1815 | [max-happy-groups][1815]                                          | dfs, dp                                    |
+| 1816 | [truncate-sentence][1816]                                         |                                            |
+| 1817 | [FindingUsersActiveMinutes][1817]                                 | Hash Table                                 |
+|      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
 [239]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java
