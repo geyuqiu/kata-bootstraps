@@ -1,6 +1,6 @@
 # crackingTheCodingInterviewBook
 
-# solutions to problems
+## solutions to problems
 | #    | Title                                                             | Data Structures etc.                        |
 | :--- | :---------------------------------------------------------------- | :-------------------------------------------|
 |  239 | [max-sliding-window][239]                                         | LinkedList                      |
@@ -21,7 +21,7 @@
 [1814]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountNicePairs.java
 [1815]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxHappyGroups.java
 
-# current progress: 
+## current progress: 
 p. 99
 
 chapters to skip: 
