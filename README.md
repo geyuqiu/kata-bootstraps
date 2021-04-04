@@ -6,6 +6,7 @@ and practicing mostly on platforms like Leetcode.
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                       |
 | :--- | :---------------------------------------------------------------- | :------------------------------------------|
+|  47  | [PermuteUnique][47]                                               | dfs                                        |
 |  239 | [max-sliding-window][239]                                         | LinkedList                                 |
 | 1670 | [front-middle-back-queue][1670]                                   |                                            |
 | 1684 | [CountConsistentStrings][1684]                                    | Hash Table                                 |
@@ -19,6 +20,7 @@ and practicing mostly on platforms like Leetcode.
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
+[47]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/PermuteUnique.java
 [239]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java
 [1670]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FrontMiddleBackQueue.java
 [1684]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountConsistentStrings.java
@@ -123,6 +125,7 @@ note down the mistakes that are discovered by ide syntax highlighting, compiler 
         * not checking edge cases
     * unfamiliar about 
         * java stream methods, conversion between array, list and stream etc.
+        * changing arraylist of int after adding it to an arraylist of arraylist has side effect (changing reference) --> add copy of the arrayList 
         * methods: `.contains` instead of `.containsKey()`
         * interfaces: `Entry` instead of `Map.Entry`
         * `https://mkyong.com/java/java-list-throws-unsupportedoperationexception/`
@@ -205,7 +208,7 @@ What would the runtime be ?
 * factorial: n! -> `O(n)`
 * fibonacci without memoization: O(2<sup>n</sup>) or O(1.6<sup>n</sup>): at the bottom of the call stack,there is sometimes only one call. 
 * fibonacci with memoization (iterative / recursive): `O(n)`
-* greatest common divisor, gcd(a,b): O(log(a+b)
+* greatest common divisor as gcd(a,b) and least common multiple as a*b/gcd(a, b): O(log(a+b)
 
 
     def gcd(a, b):
