@@ -3,8 +3,8 @@ package leetcode;
 /**
  * @author YUQIU
  */
-public class MinAbsoluteSumDiff {
-	int minAbsoluteSumDiff(int[] nums1, int[] nums2) { // 1 <= nums1[i], nums2[i] <= 10^5, 1 <= n <= 105
+public class MinAbsoluteSumDiff { // https://leetcode.com/problems/minimum-absolute-sum-difference/
+	int minAbsoluteSumDiff(int[] nums1, int[] nums2) {// time and space: O(n)
 		int n = nums1.length;
 		int[] diff = new int[n];
 

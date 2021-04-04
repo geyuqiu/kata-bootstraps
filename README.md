@@ -205,6 +205,15 @@ What would the runtime be ?
 * factorial: n! -> `O(n)`
 * fibonacci without memoization: O(2<sup>n</sup>) or O(1.6<sup>n</sup>): at the bottom of the call stack,there is sometimes only one call. 
 * fibonacci with memoization (iterative / recursive): `O(n)`
+* greatest common divisor, gcd(a,b): O(log(a+b)
+
+
+    def gcd(a, b):
+        if a % b == 0:
+            return b
+        else:
+            return gcd(b, a % b)
+
 * get all permutations of a string: **O(n * n * n!)** including string concatenation
 
         

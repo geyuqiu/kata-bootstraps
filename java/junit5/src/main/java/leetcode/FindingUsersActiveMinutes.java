@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * @author YUQIU
  */
-public class FindingUsersActiveMinutes {
+public class FindingUsersActiveMinutes { // https://leetcode.com/problems/finding-the-users-active-minutes/
 	int[] findingUsersActiveMinutes(int[][] logs, int k) {
 		int[] uams = new int[k];
 		Map<Integer, HashSet<Integer>> idTimes = new HashMap<>();
