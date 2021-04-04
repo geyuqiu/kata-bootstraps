@@ -9,10 +9,12 @@ and practicing mostly on platforms like Leetcode.
 |  239 | [max-sliding-window][239]                                         | LinkedList                      |
 | 1670 | [front-middle-back-queue][1670]                                   |                                             |
 | 1684 | [CountConsistentStrings][1684]                                    | Hash Table                                  |
-| 1812 | [square-is-white][1812]                                     |                                   |
+| 1812 | [square-is-white][1812]                                            |                                   |
 | 1813 | [are-sentences-similar][1813]                                     | LinkedList                                  |
 | 1814 | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                  |
 | 1815 | [max-happy-groups][1815]                                          | dfs, dp                                     |
+| 1816 | [truncate-sentence][1816]                                          |                                    |
+| 1817 | [FindingUsersActiveMinutes][1817]                                  |                                    |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                         |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -23,6 +25,8 @@ and practicing mostly on platforms like Leetcode.
 [1813]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/AreSentencesSimilar.java
 [1814]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountNicePairs.java
 [1815]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxHappyGroups.java
+[1816]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/TruncateSentence.java
+[1817]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FindingUsersActiveMinutes.java
 
 ## current progress: 
 p. 99
@@ -106,15 +110,21 @@ chapters to skip:
 * test n SMALL cases including 
     * edge cases
 * type paper code into ide with unit tests:
-note down the mistakes that are discovered by ide syntax highlighting, compiler and while debugging and keep them as a list
+note down the mistakes that are discovered by ide syntax highlighting, compiler and while debugging and keep them as a list, **also document them while coding in general** 
     * not using all given function params 
     * not using all given conditions 
     * Integer overflow while multiplying `10^9` with `10^9`
     * **begins coding too early** before completing data structure brainstorm and though about every steps along the way
         * not understanding every detail of the problem
-        * used the wrong data structure
+        * using the **wrong data structure**
+            * not understanding the purpose of **every** constraint
         * not checking edge cases
-    * unfamiliar about java stream methods, conversion between array, list and stream etc.
+    * unfamiliar about 
+        * java stream methods, conversion between array, list and stream etc.
+        * methods: `.contains` instead of `.containsKey()`
+        * interfaces: `Entry` instead of `Map.Entry`
+        * `https://mkyong.com/java/java-list-throws-unsupportedoperationexception/`
+        * typo: `,` instead of `;`, `Hashset` instead of `HashSet`, `.size` instead of `.size()`
     * not making code modular 
 * techniques
     * write `initIncrementalMatrix(int size)` and fill in the details later
