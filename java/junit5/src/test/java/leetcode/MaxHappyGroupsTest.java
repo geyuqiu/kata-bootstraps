@@ -16,7 +16,7 @@ class MaxHappyGroupsTest {
 
 	@SuppressWarnings("unused")
 	private static Stream<Arguments>
-	maxHappyGroupsBruteForce() {
+	maxHappyGroups() {
 		return Stream.of(
 			Arguments.of(3, new int[]{1, 2, 3}, 2),
 			Arguments.of(3, new int[]{1, 2, 3, 4, 5, 6}, 4),
@@ -28,8 +28,8 @@ class MaxHappyGroupsTest {
 	}
 	@ParameterizedTest
 	@MethodSource void
-	maxHappyGroupsBruteForce(int batchSize, int[] groups, int expected) {
-		int actual = maxHappyGroups.maxHappyGroupsBruteForce(batchSize, groups);
+	maxHappyGroups(int batchSize, int[] groups, int expected) {
+		int actual = maxHappyGroups.maxHappyGroups(batchSize, groups);
 
 		assertThat(actual).isEqualTo(expected);
 	}
