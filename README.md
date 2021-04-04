@@ -14,7 +14,8 @@ and practicing mostly on platforms like Leetcode.
 | 1814 | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                 |
 | 1815 | [max-happy-groups][1815]                                          | dfs, dp                                    |
 | 1816 | [truncate-sentence][1816]                                         |                                            |
-| 1817 | [FindingUsersActiveMinutes][1817]                                 | Hash Table                                 |
+| 1817 | [finding-users-active-minutes][1817]                              | Hash Table                                 |
+| 1818 | [min-absolute-sum-diff][1818]                                     |                                            |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -27,6 +28,7 @@ and practicing mostly on platforms like Leetcode.
 [1815]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxHappyGroups.java
 [1816]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/TruncateSentence.java
 [1817]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FindingUsersActiveMinutes.java
+[1818]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MinAbsoluteSumDiff.java
 
 ## current progress: 
 p. 99
@@ -113,7 +115,7 @@ chapters to skip:
 note down the mistakes that are discovered by ide syntax highlighting, compiler and while debugging and keep them as a list, **also document them while coding in general** 
     * not using all given function params 
     * not using all given conditions 
-    * Integer overflow while multiplying `10^9` with `10^9`
+    * Integer overflow while multiplying / adding `10^9*7` with `10^9*7`
     * **begins coding too early** before completing data structure brainstorm and though about every steps along the way
         * not understanding every detail of the problem
         * using the **wrong data structure**
@@ -124,7 +126,7 @@ note down the mistakes that are discovered by ide syntax highlighting, compiler 
         * methods: `.contains` instead of `.containsKey()`
         * interfaces: `Entry` instead of `Map.Entry`
         * `https://mkyong.com/java/java-list-throws-unsupportedoperationexception/`
-        * typo: `,` instead of `;`, `Hashset` instead of `HashSet`, `.size` instead of `.size()`
+        * typo: `,` instead of `;`, `Hashset` instead of `HashSet`, `.size` instead of `.size()`, missing `=` in `+=`
     * not making code modular 
 * techniques
     * write `initIncrementalMatrix(int size)` and fill in the details later
