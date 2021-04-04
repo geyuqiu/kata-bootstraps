@@ -271,6 +271,6 @@ keep trying when you are stuck, pay attention to what the interview is saying
     * home office support: phone, hardware, computer, sim card etc.
     * full time
 * company/DEV culture
-    * QA / TDD
-    * Full Stack
-    * How good does the company's name look on my resume: vs FANG company
+    * QA / TDD vs We don't need tests
+    * Full Stack vs Niche culture
+    * How good does the company's name look on my resume: Startup vs FANG company
