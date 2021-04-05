@@ -20,7 +20,7 @@ public class CountDifferentSubsequenceGCDs { // https://leetcode.com/problems/nu
 			max = Math.max(n, max);
 			gcds.add(n);
 		}
-		max = Math.min(max, 10000);
+		max = Math.min(max, 100000);
 
 		for (int i = 0; i < max; i++) { // 0 -> % 1,  max-1 -> % max,
 			int gcd = i + 1;
