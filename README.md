@@ -120,6 +120,7 @@ note down the mistakes that are discovered by ide syntax highlighting, compiler 
     * not using all given function params 
     * not using all given conditions 
     * Integer overflow while multiplying / adding `10^9*7` with `10^9*7`
+    * optimize reduce time complexity (find the next **bottleneck**) and space complexity (array suffices) with well chosen test cases
     * **begins coding too early** before completing data structure brainstorm and though about every steps along the way
         * not understanding every detail of the problem
         * using the **wrong data structure**

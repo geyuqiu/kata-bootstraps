@@ -6,7 +6,7 @@ package leetcode;
 public class CountDifferentSubsequenceGCDs { // https://leetcode.com/problems/number-of-different-subsequences-gcds/
 	// 1 <= nums.length <= 10^5
 	// 1 <= nums[i] <= 2 * 10^5
-	int countDifferentSubsequenceGCDs(int[] nums) { // time: O( n * log(n) * log(n)), space : O(n)
+	int countDifferentSubsequenceGCDs(int[] nums) { // time: O( M * log(M) * log(M)), space : O(M), M: max of nums[i]
 
 		int max = 0;
 		for (int n: nums) {
@@ -33,10 +33,12 @@ public class CountDifferentSubsequenceGCDs { // https://leetcode.com/problems/nu
 
 		for (int i = gcd; i < exists.length; i += gcd) {
 			if (exists[i]) {
-				calculatedGcd = gcd(calculatedGcd, i);
+				calculatedGcd = gcd(calculatedGcd, i); // gcd(2*3,2*5) = 2
 			}
 			// gcd(4,16) = 4 != 2
-			if (calculatedGcd == gcd) return true;
+			if (calculatedGcd == gcd) {
+				return true;
+			}
 		}
 		return false;
 	}
