@@ -11,7 +11,7 @@ import java.util.Set;
 public class CountDifferentSubsequenceGCDs { // https://leetcode.com/problems/number-of-different-subsequences-gcds/
 	// 1 <= nums.length <= 10^5
 	// 1 <= nums[i] <= 2 * 10^5
-	int countDifferentSubsequenceGCDs(int[] nums) { // time: O(2^n * n * log(n))
+	int countDifferentSubsequenceGCDs(int[] nums) { // time: O( 10000 * n * log(n)), space : O(n)
 
 		Set<Integer> gcds = new HashSet<>();
 
@@ -45,14 +45,16 @@ public class CountDifferentSubsequenceGCDs { // https://leetcode.com/problems/nu
 		}
 
 		if (counter < 2) return false;
+		ArrayList<Integer> divided = new ArrayList<>();
 		for (int n : gcds) {
-			gcds.set(gcds.indexOf((Integer)n), n/gcd);
+			divided.add(n/gcd);
 		}
-		if (gcd(new ArrayList<Integer>(gcds)) == 1) return true; // if you divide each number in the subsequence by x, then the gcd of the resulting numbers should be 1.
+		if (gcd(divided) == 1) return true; // if you divide each number in the subsequence by x, then the gcd of the resulting numbers should be 1.
 		return false;
 	}
 
 	int gcd(List<Integer> nums) { // O(n * log(s)), s being the smallest number of nums
+		if (nums.contains(1)) return 1;
 		int result = nums.get(0); // associativity: gcd(a,b,c,d) = gcd(gcd(gcd(a,b),c),d)
 		for (int i = 1; i < nums.size(); i++) {
 			result = gcd(result, nums.get(i));
