@@ -131,6 +131,7 @@ note down the mistakes that are discovered by ide syntax highlighting, compiler 
         * methods: `.contains` instead of `.containsKey()`
         * interfaces: `Entry` instead of `Map.Entry`
         * `https://mkyong.com/java/java-list-throws-unsupportedoperationexception/`
+        * `ConcurrentModificationException`: modifying element in a set when iterating through it via foreach / iterator
         * typo: `,` instead of `;`, `Hashset` instead of `HashSet`, `.size` instead of `.size()`, missing `=` in `+=`
     * not making code modular 
 * techniques

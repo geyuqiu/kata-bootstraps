@@ -35,11 +35,35 @@ public class CountDifferentSubsequenceGCDs { // https://leetcode.com/problems/nu
 	}
 
 	private boolean checkIfAtLeast2DivisableBy(int gcd, int[] nums) {
+		List<Integer> gcds = new ArrayList<>();
 		int counter = 0;
 		for (int n: nums) {
-			if (n % gcd == 0) counter++;
-			if (counter > 1) return true;
+			if (n % gcd == 0) {
+				counter++;
+				gcds.add(n);
+			}
 		}
+
+		if (counter < 2) return false;
+		for (int n : gcds) {
+			gcds.set(gcds.indexOf((Integer)n), n/gcd);
+		}
+		if (gcd(new ArrayList<Integer>(gcds)) == 1) return true; // if you divide each number in the subsequence by x, then the gcd of the resulting numbers should be 1.
 		return false;
+	}
+
+	int gcd(List<Integer> nums) { // O(n * log(s)), s being the smallest number of nums
+		int result = nums.get(0); // associativity: gcd(a,b,c,d) = gcd(gcd(gcd(a,b),c),d)
+		for (int i = 1; i < nums.size(); i++) {
+			result = gcd(result, nums.get(i));
+
+			if (result == 1) return 1;
+		}
+		return result;
+	}
+
+	int gcd(int a, int b) { // O(log(a+b))
+		if (a % b == 0) return b;
+		else return gcd(b, a % b);
 	}
 }
