@@ -5,12 +5,12 @@ package leetcode;
  * max # of jumps when frog is changing lane
  * no obstacles on second lane, then done
  * there is always a way to get to the goal: normally moving (if greedy, but do we get a validi solution going greedy ?)
- 	* first east
- 	* then north / south
- 	* if doing dfs / greedy, if meeting dead end then go back to start
+ 	* first east, then north / south, for greedy, if doing dfs / greedy, if meeting dead end then go back to start?
  * side jump: jump over 1 rock on the 2 lane (moving 2 fields)
  */
 public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/problems/minimum-sideway-jumps,
+	int[][] visited;
+	int[][] costs; // dp
 	public int minSideJumps(int[] obstacles) { // time: O(3n), space: O(3n)
 		int n = obstacles.length;
 		if (n < 3) return 0;
@@ -21,8 +21,8 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 		}
 		if (!obstacleMetOnSecondLane) return 0;
 
-		int[][] visited = new int[n][3]; // 0: unvisited, 1: visisted, 2: obstacle
-		int[][] costs = new int[n][3]; // dp
+		visited = new int[n][3]; // 0: unvisited, 1: visisted, 2: obstacle
+		costs = new int[n][3]; // dp
 
 		markObstacles(obstacles, visited, costs);
 
@@ -40,17 +40,25 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 		System.out.println();
 		print2DimCost(costs);
 
-		search(visited, costs, 0, 1);
+		search();
 
 		int r = getMin(costs);
 
 		return r;
 	}
 
-	private void search(int[][] visited, int[][] costs, int i, int j) {
+	private void search() {
+		// go through 2 dim array cost and see west /north / south
+		// if (on second lane: i==1) cost[i][j] = min(w, n, s)
+		for (int i = 0; i < costs.length; i++) {
+			for (int j = 0; j < 3; j++) {
 
+			}
+		}
+	}
 
-
+	private boolean canJumpOverRockInMiddle (int i, int j) {
+		return false;
 	}
 
 	private int getMin(int[][] costs) {
