@@ -125,7 +125,7 @@ note down the mistakes that are discovered by ide syntax highlighting, compiler 
         * not understanding every detail of the problem
         * using the **wrong data structure**
             * not understanding the purpose of **every** constraint
-        * not checking edge cases (base case e.g.)
+        * not checking edge cases (base case, indexOutOfBounds e.g.)
         * missing return statement ...
         * comparing with the wrong element type in array
         * using / picked the wrong variable / number ... use to more temp variables

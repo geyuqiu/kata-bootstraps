@@ -3,8 +3,8 @@ package leetcode;
 /**
  * @author YUQIU
  */
-public class ArraySign {
-	public int arraySign(int[] nums) {
+public class ArraySign { // https://leetcode.com/contest/weekly-contest-236/problems/sign-of-the-product-of-an-array/
+	public int arraySign(int[] nums) { // O(n)
 		if (nums.length == 1) return checkSign(nums[0]);
 
 		int result = nums[0];

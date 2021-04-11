@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * @author YUQIU
  */
-public class FindTheWinner {
+public class FindTheWinner { // https://leetcode.com/contest/weekly-contest-236/problems/find-the-winner-of-the-circular-game/
 	public int findTheWinner(int n, int k) { // time: O(k*n), space: O(n)
 		if (k == 1) return n;
 
@@ -31,6 +31,6 @@ public class FindTheWinner {
 			}
 		}
 
-		return p.stream().findFirst().get();
+		return p.stream().findFirst().get(); // WTF: https://stackoverflow.com/questions/8882295/how-to-get-the-first-element-of-the-list-or-set
 	}
 }
