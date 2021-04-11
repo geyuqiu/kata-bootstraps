@@ -117,7 +117,7 @@ chapters to skip:
     * edge cases
 * type paper code into ide with unit tests:
 note down the mistakes that are discovered by ide syntax highlighting, compiler and while debugging and keep them as a list, **also document them while coding in general** 
-    * not using all given function params 
+    * not using all given function params: increment 1 instead of the right function variable 
     * not using all given conditions 
     * Integer overflow while multiplying / adding `10^9*7` with `10^9*7`
     * optimize reduce time complexity (find the next **bottleneck**) and space complexity (array suffices) with well chosen test cases
@@ -125,7 +125,11 @@ note down the mistakes that are discovered by ide syntax highlighting, compiler 
         * not understanding every detail of the problem
         * using the **wrong data structure**
             * not understanding the purpose of **every** constraint
-        * not checking edge cases
+        * not checking edge cases (base case e.g.)
+        * missing return statement ...
+        * comparing with the wrong element type in array
+        * using / picked the wrong variable / number ... use to more temp variables
+        * forget to set flag in helper array ...
     * unfamiliar about 
         * java stream methods, conversion between array, list and stream etc.
         * changing arraylist of int after adding it to an arraylist of arraylist has side effect (changing reference) --> add copy of the arrayList 
@@ -134,6 +138,7 @@ note down the mistakes that are discovered by ide syntax highlighting, compiler 
         * `https://mkyong.com/java/java-list-throws-unsupportedoperationexception/`
         * `ConcurrentModificationException`: modifying element in a set when iterating through it via foreach / iterator
         * typo: `,` instead of `;`, `Hashset` instead of `HashSet`, `.size` instead of `.size()`, missing `=` in `+=`
+        * so tedious to get first element in hashset p?:  return p.stream().findFirst().get();
     * not making code modular 
 * techniques
     * write `initIncrementalMatrix(int size)` and fill in the details later
