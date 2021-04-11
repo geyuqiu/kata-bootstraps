@@ -17,7 +17,6 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 		}
 		if (!obstacleMetOnSecondLane) return 0;
 
-		int r = 0;
 		int[][] visited = new int[n][3]; // 0: unvisited, 1: visisted, 2: obstacle
 		int[][] costs = new int[n][3]; // dp
 
@@ -37,7 +36,25 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 		System.out.println();
 		print2DimCost(costs);
 
+		search(visited, costs);
+
+		int r = getMin(costs);
+
 		return r;
+	}
+
+	private void search(int[][] visited, int[][] costs) {
+
+	}
+
+	private int getMin(int[][] costs) {
+		int min = Integer.MAX_VALUE;
+		for (int i = 0; i < costs.length; i++) {
+			for (int j = 0; j < 3; j++) {
+				if (costs[i][j] >= 0 && costs[i][j] < min) min = costs[i][j];
+			}
+		}
+		return min;
 	}
 
 	private void markAsPaths(int[][] visited, int[][] costs) {
