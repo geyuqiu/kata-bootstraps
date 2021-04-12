@@ -16,35 +16,31 @@ class MKAverage { // space: O(n), time: O(n * logm) for BST insertion and deleti
 	int k;
 
 	int c = 0;
-	List<Integer> nums;
-	List<Integer> sortedSlidingWindowIndexes;
+	List<Integer> nums = new ArrayList<>(); // n
+	List<Integer> sortedSlidingWindowIndexes = new ArrayList<>(); // m
 
 	public MKAverage(int m, int k) {
 		this.m = m;
 		this.k = k;
-		nums = new ArrayList<>();
-		sortedSlidingWindowIndexes = new ArrayList<>(m+1);
 	}
 
 	public void addElement(int num) {
 		slideByRemovingElement();
 
 		int indexAdded = binarySearch(num);
-		sortedSlidingWindowIndexes.add(indexAdded, c);
+		sortedSlidingWindowIndexes.add(indexAdded, c++); // O(n)
 		nums.add(num);
-		c++;
 	}
 
 	void slideByRemovingElement() {
 		int n = nums.size();
 		if (n >= m) {
 			int indexToRemove = n - m;
-			sortedSlidingWindowIndexes.remove((Integer) indexToRemove);
+			sortedSlidingWindowIndexes.remove((Integer) indexToRemove); // O(n)
 		}
 	}
 
-	int binarySearch(int key) {
-
+	int binarySearch(int key) {  // O(log m)
 		int low = 0;
 		int high = sortedSlidingWindowIndexes.size() - 1;
 
@@ -62,7 +58,7 @@ class MKAverage { // space: O(n), time: O(n * logm) for BST insertion and deleti
 		return low;
 	}
 
-	int calculateMKAverage() {
+	int calculateMKAverage() { // O(k)
 		if (nums.size() < m) return -1;
 
 		long sum = 0L;
