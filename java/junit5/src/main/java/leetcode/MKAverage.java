@@ -10,7 +10,7 @@ import java.util.*;
  * save sliding window elements as sorted list as BST array ?
  * similar to this: https://leetcode.com/problems/sliding-window-maximum/, how do I persist the rest of k-2 elements ?
  */
-class MKAverage { // space: O(n), time: O(n) but for sorting alone: O(n * mlogm), n: # of calculateMKAverage operations
+class MKAverage { // space: O(n), time: O(n * logm) for BST insertion and deletion, n: # of calculateMKAverage operations
 
 	int m;
 	int k;
@@ -27,11 +27,20 @@ class MKAverage { // space: O(n), time: O(n) but for sorting alone: O(n * mlogm)
 	}
 
 	public void addElement(int num) {
+		slideByRemovingElement();
 
 		int indexAdded = binarySearch(num);
 		sortedSlidingWindowIndexes.add(indexAdded, c);
 		nums.add(num);
 		c++;
+	}
+
+	void slideByRemovingElement() {
+		int n = nums.size();
+		if (nums.size() >= m) {
+			int indexToRemove = binarySearch(nums.get(n - m));
+			sortedSlidingWindowIndexes.remove((Integer) indexToRemove);
+		}
 	}
 
 	int binarySearch(int key) {
@@ -48,14 +57,16 @@ class MKAverage { // space: O(n), time: O(n) but for sorting alone: O(n * mlogm)
 			else if (midVal > key)
 				high = mid - 1;
 			else
-				return mid; // key found
+				return mid;
 		}
 		return low;
 	}
 
 	int calculateMKAverage() {
+		if (nums.size() < m) return -1;
+
 		long sum = 0L;
-		for (int i = k; i <= m - k - 1; i++) sum += (long) sortedSlidingWindowIndexes.get(i);
+		for (int i = k; i <= m - k - 1; i++) sum += (long) nums.get(sortedSlidingWindowIndexes.get(i));
 
 		return Math.round(sum / (m - 2 * k));
 	}
