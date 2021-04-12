@@ -21,27 +21,25 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 		if (!obstacleMetOnSecondLane) return 0;
 
 		costs = new int[n][3]; // dp
-
 		markObstacles(obstacles);
+		initializeCosts(n);
+		markQuestionable();
 
-		// costs at 0. and n. are obvious
+		print2DimCost(costs);
+
+		fillCosts();
+		int r = getMin(costs);
+		return r;
+	}
+
+	private void initializeCosts(int n) {
+		// costs at 0. and n-1. are obvious
 		costs[0][0] = 1;
 		costs[0][1] = 0;
 		costs[0][2] = 1;
 		costs[n-1][0] = 0;
 		costs[n-1][1] = 0;
 		costs[n-1][2] = 0;
-
-		markQuestionable();
-
-		System.out.println();
-		print2DimCost(costs);
-
-		fillCosts();
-
-		int r = getMin(costs);
-
-		return r;
 	}
 
 	private void fillCosts() {
@@ -52,10 +50,6 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 
 			}
 		}
-	}
-
-	private boolean canJumpOverRockInMiddle (int i, int j) {
-		return false;
 	}
 
 	private int getMin(int[][] costs) {
