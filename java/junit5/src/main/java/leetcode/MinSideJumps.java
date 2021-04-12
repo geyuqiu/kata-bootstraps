@@ -45,7 +45,7 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 	private void fillCosts() {
 		// go through 2 dim array cost and see west /north / south
 		// if (on second lane: i==1 && cost[i][j] == MAX) cost[i][j] = min(w, n, s)
-		for (int i = 0; i < costs.length; i++) {
+		for (int i = 1; i < costs.length - 1; i++) {
 			for (int j = 0; j < 3; j++) {
 
 			}
