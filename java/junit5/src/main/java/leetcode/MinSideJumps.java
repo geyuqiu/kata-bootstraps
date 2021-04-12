@@ -11,16 +11,18 @@ package leetcode;
  */
 public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/problems/minimum-sideway-jumps,
 	int[][] costs; // dp
-	int INT_MAX = Integer.MAX_VALUE - 1000;
-	int OBSTACLE = Integer.MAX_VALUE - 100000; // acceptable for n<=500000
+	int INT_MAX = 1000000;
+	int OBSTACLE = 500000; // acceptable for n<=500000
+	int n;
 	public int minSideJumps(int[] obstacles) { // time: O(n), space: O(n)
-		int n = obstacles.length;
+		n = obstacles.length;
 		if (n < 3) return 0;
 
 		costs = new int[n][3];
-		markObstacles(obstacles);
-		initializeCosts(n);
+
 		markQuestionable();
+		markObstacles(obstacles);
+		initializeCosts();
 
 //		print2DimCost(costs);
 //		System.out.println();
@@ -30,7 +32,7 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 		return getMin(costs);
 	}
 
-	private void initializeCosts(int n) {
+	private void initializeCosts() {
 		// costs at 0. and n-1. are obvious
 		costs[0][0] = 1;
 		costs[0][1] = 0;
@@ -42,7 +44,7 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 
 	private void fillCosts() {
 		// go through 2 dim array cost and see west /north / south
-		for (int i = 1; i < costs.length - 1; i++) {
+		for (int i = 1; i < n - 1; i++) {
 			for (int j = 0; j < 3; j++) {
 				if (costs[i][j] != OBSTACLE) {
 					calcLocalMax(i, j);
@@ -68,11 +70,9 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 
 	private void calcLocalMax(int i, int j) { // if (on second lane: i==1 && cost[i][j] != OBSTACLE) cost[i][j] = min(left, up, down, [jump])
 		if (j == 0) {
-			costs[i][j] = Math.min(left(i, j), up(i, j) + 1); // only north, but think about jumping
-			costs[i][j] = Math.min(costs[i][j], upJump(i, j) + 1);
+			costs[i][j] = Math.min(Math.min(left(i, j), up(i, j) + 1), upJump(i, j) + 1); // only north, but think about jumping
 		} else if (j == 2) {
-			costs[i][j] = Math.min(left(i, j), down(i, j) + 1);
-			costs[i][j] = Math.min(costs[i][j], downJump(i, j) + 1); // only south, think about jumping over obstacle does not matter! can also jump over free path
+			costs[i][j] = Math.min(Math.min(left(i, j), down(i, j) + 1), downJump(i, j) + 1); // only south, think about jumping over obstacle does not matter! can also jump over free path
 		} else {
 			costs[i][j] = Math.min(Math.min(left(i, j), up(i, j) + 1), down(i, j) + 1);
 		}
@@ -108,7 +108,7 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 
 	private int getMin(int[][] costs) {
 		int min = INT_MAX;
-		int i = costs.length - 2; // no costs for last point
+		int i = n - 2; // no costs for last point
 		for (int j = 0; j < 3; j++) {
 			 min = Math.min(min, costs[i][j]);
 		}
@@ -116,15 +116,15 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 	}
 
 	private void markQuestionable() {
-		for (int i = 1; i < costs.length - 1; i++) {
+		for (int i = 1; i < n - 1; i++) {
 			for (int j = 0; j < 3; j++) {
-				if (costs[i][j] != OBSTACLE) costs[i][j] = INT_MAX;
+				costs[i][j] = INT_MAX;
 			}
 		}
 	}
 
 	private void markObstacles(int[] obstacles) {
-		for (int i = 1; i < obstacles.length-1; i++) {
+		for (int i = 1; i < n-1; i++) {
 			if (obstacles[i] == 0) {
 				continue;
 			}
