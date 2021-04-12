@@ -130,6 +130,7 @@ note down the mistakes that are discovered by ide syntax highlighting, compiler 
         * comparing with the wrong element type in array
         * using / picked the wrong variable / number ... use to more temp variables
         * forget to set flag in helper array ...
+        * index bounds, forgot if case in for loop
     * unfamiliar about 
         * java stream methods, conversion between array, list and stream etc.
         * changing arraylist of int after adding it to an arraylist of arraylist has side effect (changing reference) --> add copy of the arrayList 
