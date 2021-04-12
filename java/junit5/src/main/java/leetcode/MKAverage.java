@@ -15,21 +15,30 @@ class MKAverage { // space: O(n), time: O(n) but for sorting alone: O(n * mlogm)
 	int m;
 	int k;
 	List<Integer> nums;
-	List<Integer> sortedSlidingWindow;
+	List<Integer> sortedSlidingWindowIndexes;
 
 	public MKAverage(int m, int k) {
 		this.m = m;
 		this.k = k;
 		nums = new ArrayList<>();
+		sortedSlidingWindowIndexes = new ArrayList<>(m+1);
 	}
 
-	public void addElement(int num) { // how to keep sorting ?
+	public void addElement(int num) {
+
+		int indexAdded = binarySearch();
+		sortedSlidingWindowIndexes.add(indexAdded, nums.size());
 		nums.add(num);
+	}
+
+	int binarySearch() {
+
+		return 0;
 	}
 
 	int calculateMKAverage() {
 		long sum = 0L;
-		for (int i = k; i <= m - k - 1; i++) sum += (long) sortedSlidingWindow.get(i);
+		for (int i = k; i <= m - k - 1; i++) sum += (long) sortedSlidingWindowIndexes.get(i);
 
 		return Math.round(sum / (m - 2 * k));
 	}
