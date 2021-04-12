@@ -14,6 +14,8 @@ class MKAverage { // space: O(n), time: O(n) but for sorting alone: O(n * mlogm)
 
 	int m;
 	int k;
+
+	int c = 0;
 	List<Integer> nums;
 	List<Integer> sortedSlidingWindowIndexes;
 
@@ -26,14 +28,29 @@ class MKAverage { // space: O(n), time: O(n) but for sorting alone: O(n * mlogm)
 
 	public void addElement(int num) {
 
-		int indexAdded = binarySearch();
-		sortedSlidingWindowIndexes.add(indexAdded, nums.size());
+		int indexAdded = binarySearch(num);
+		sortedSlidingWindowIndexes.add(indexAdded, c);
 		nums.add(num);
+		c++;
 	}
 
-	int binarySearch() {
+	int binarySearch(int key) {
 
-		return 0;
+		int low = 0;
+		int high = sortedSlidingWindowIndexes.size() - 1;
+
+		while (low <= high) {
+			int mid = (low + high) >>> 1;
+			long midVal = nums.get(mid);
+
+			if (midVal < key)
+				low = mid + 1;
+			else if (midVal > key)
+				high = mid - 1;
+			else
+				return mid; // key found
+		}
+		return low;
 	}
 
 	int calculateMKAverage() {
