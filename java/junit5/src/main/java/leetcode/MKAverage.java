@@ -37,8 +37,8 @@ class MKAverage { // space: O(n), time: O(n * logm) for BST insertion and deleti
 
 	void slideByRemovingElement() {
 		int n = nums.size();
-		if (nums.size() >= m) {
-			int indexToRemove = binarySearch(nums.get(n - m));
+		if (n >= m) {
+			int indexToRemove = n - m;
 			sortedSlidingWindowIndexes.remove((Integer) indexToRemove);
 		}
 	}

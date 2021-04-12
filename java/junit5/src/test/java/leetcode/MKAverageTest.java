@@ -15,6 +15,28 @@ class MKAverageTest {
 	MKAverage mkAverage;
 
 	@Test
+	void calculateMKAverage70965() {
+		mkAverage = new MKAverage(3, 1);
+		mkAverage.addElement(4010);
+		mkAverage.addElement(2926);
+		int first = mkAverage.calculateMKAverage(); // return -1, because m = 3 and only 2 elements exist.
+
+		mkAverage.addElement(3336);
+		mkAverage.addElement(851238);
+		int second = mkAverage.calculateMKAverage();
+
+		mkAverage.addElement(70965);
+		mkAverage.addElement(1207);
+		int last = mkAverage.calculateMKAverage();
+
+		mkAverage.addElement(49966);
+
+		assertEquals(-1, first);
+		assertEquals(3336, second);
+		assertEquals(70965, last);
+	}
+
+	@Test
 	void calculateMKAverage33433() {
 		mkAverage = new MKAverage(3, 1);
 		mkAverage.addElement(17612);
