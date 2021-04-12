@@ -8,7 +8,7 @@ import java.util.*;
  * m: 10^5
  * k: 10^5 / 2
  * save sliding window elements as sorted list as BS array ?
- * similar to this: https://leetcode.com/problems/sliding-window-maximum/, how do I persist the rest of k-2 elements ?
+ * similar to this: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java, how do I persist the rest of k-2 elements ?
  */
 class MKAverage { // space: O(n), time: O(n) for BS insertion and deletion (move complexity from calculateMKAverage to addElement)
 
