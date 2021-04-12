@@ -18,6 +18,7 @@ and practicing mostly on platforms like Leetcode.
 | 1816 | [truncate-sentence][1816]                                         |                                            |
 | 1817 | [finding-users-active-minutes][1817]                              | Hash Table                                 |
 | 1818 | [min-absolute-sum-diff][1818]                                     |                                            |
+| 1822 | [arrays-ign][1822]                                     |                                            |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -33,6 +34,7 @@ and practicing mostly on platforms like Leetcode.
 [1816]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/TruncateSentence.java
 [1817]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FindingUsersActiveMinutes.java
 [1818]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MinAbsoluteSumDiff.java
+[1822]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/ArraySign.java
 
 ## current progress: 
 p. 99

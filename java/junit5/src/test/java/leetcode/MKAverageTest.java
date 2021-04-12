@@ -84,7 +84,6 @@ class MKAverageTest {
 		mkAverage = new MKAverage(3, 1);
 		mkAverage.nums = new ArrayList<>(Arrays.asList(1, 10));
 		mkAverage.sortedSlidingWindowIndexes = new ArrayList<>(Arrays.asList(0, 1));
-		mkAverage.c = 2;
 
 		mkAverage.addElement(3);
 
@@ -99,7 +98,6 @@ class MKAverageTest {
 		mkAverage = new MKAverage(3, 1);
 		mkAverage.nums = new ArrayList<>(Arrays.asList(1, 10, 3));
 		mkAverage.sortedSlidingWindowIndexes = new ArrayList<>(Arrays.asList(0, 2, 1));
-		mkAverage.c = 2;
 
 		mkAverage.slideByRemovingElement();
 

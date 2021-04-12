@@ -7,10 +7,10 @@ import java.util.*;
  * n: 10^5
  * m: 10^5
  * k: 10^5 / 2
- * save sliding window elements as sorted list as BST array ?
+ * save sliding window elements as sorted list as BS array ?
  * similar to this: https://leetcode.com/problems/sliding-window-maximum/, how do I persist the rest of k-2 elements ?
  */
-class MKAverage { // space: O(n), time: O(n) for BST insertion and deletion (move complexity from calculateMKAverage to addElement)
+class MKAverage { // space: O(n), time: O(n) for BS insertion and deletion (move complexity from calculateMKAverage to addElement)
 
 	int m;
 	int k;

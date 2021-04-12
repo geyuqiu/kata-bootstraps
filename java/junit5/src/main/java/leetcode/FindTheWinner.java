@@ -18,7 +18,6 @@ public class FindTheWinner { // https://leetcode.com/contest/weekly-contest-236/
 		int i = 0;
 		int c = k;
 
-		// true means loser
 		while (p.size() > 1) {
 			if (++i > n) i = 1;
 			if (losers[i] == false) {
@@ -26,7 +25,7 @@ public class FindTheWinner { // https://leetcode.com/contest/weekly-contest-236/
 			}
 			if (c == 0) {
 				p.remove((Integer) i);
-				losers[i] = true;
+				losers[i] = true; // true means loser
 				c = k;
 			}
 		}

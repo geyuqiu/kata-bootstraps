@@ -5,7 +5,7 @@ package leetcode;
  * max # of jumps when frog is changing lane
  * no obstacles on second lane, then done
  * every point max 1 obstacle
- * there is always a way to get to the goal: normally moving (if greedy, but do we get a validi solution going greedy ?)
+ * there is always a way to get to the goal: normally moving (if greedy, but do we get a valid solution going greedy ?)
  	* first east, then north / south, for greedy, if doing dfs / greedy, if meeting dead end then go back to start, so questionable run time?
  * side jump: jump over 1 rock / free space on the 2 lane (moving 2 fields at once !)
  */
@@ -24,11 +24,11 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 		markObstacles(obstacles);
 		initializeCosts();
 
-//		print2DimCost(costs);
-//		System.out.println();
+		print2DimCost(costs);
+		System.out.println();
 
 		fillCosts();
-//		print2DimCost(costs);
+		print2DimCost(costs);
 		return getMin(costs);
 	}
 
@@ -140,7 +140,7 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 			for (int j = 0; j < a[i].length; j++) {
 				String value = "";
 				if (a[i][j] == INT_MAX) value = "? ";
-				else if (a[i][j] == OBSTACLE) value = "X  ";
+				else if (a[i][j] == OBSTACLE) value = "X ";
 				else value = a[i][j] + " ";
 				System.out.print(value);
 			}
