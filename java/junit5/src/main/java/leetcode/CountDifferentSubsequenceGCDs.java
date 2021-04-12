@@ -8,9 +8,11 @@ public class CountDifferentSubsequenceGCDs { // https://leetcode.com/problems/nu
 	// 1 <= nums[i] <= 2 * 10^5
 	int countDifferentSubsequenceGCDs(int[] nums) { // time: O( M * log(M) * log(M)), space : O(M), M: max of nums[i]
 
-		int len = getMax(nums);
-		boolean[] exists = new boolean[len + 1];
+		int max = 0;
+		for (int n: nums) max = Math.max(n, max);
 
+		int len = max + 1;
+		boolean[] exists = new boolean[len];
 		for (int n : nums) exists[n] = true;
 
 		int gcdCount = 0;
@@ -19,13 +21,6 @@ public class CountDifferentSubsequenceGCDs { // https://leetcode.com/problems/nu
 				gcdCount++;
 
 		return gcdCount;
-	}
-
-	private int getMax(int[] nums) {
-		int max = 0;
-		for (int n: nums) max = Math.max(n, max);
-
-		return max;
 	}
 
 	boolean subsequenceFound(boolean[] exists, int factor) {
