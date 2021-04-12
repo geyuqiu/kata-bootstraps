@@ -9,7 +9,6 @@ package leetcode;
  * side jump: jump over 1 rock on the 2 lane (moving 2 fields)
  */
 public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/problems/minimum-sideway-jumps,
-	int[][] visited;
 	int[][] costs; // dp
 	public int minSideJumps(int[] obstacles) { // time: O(3n), space: O(3n)
 		int n = obstacles.length;
@@ -21,10 +20,9 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 		}
 		if (!obstacleMetOnSecondLane) return 0;
 
-		visited = new int[n][3]; // 0: unvisited, 1: visisted, 2: obstacle
 		costs = new int[n][3]; // dp
 
-		markObstacles(obstacles, visited, costs);
+		markObstacles(obstacles);
 
 		// costs at 0. and n. are obvious
 		costs[0][0] = 1;
@@ -34,22 +32,21 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 		costs[n-1][1] = 0;
 		costs[n-1][2] = 0;
 
-		markAsPaths(visited, costs);
+		markQuestionable();
 
-		print2DimArray(visited);
 		System.out.println();
 		print2DimCost(costs);
 
-		search();
+		fillCosts();
 
 		int r = getMin(costs);
 
 		return r;
 	}
 
-	private void search() {
+	private void fillCosts() {
 		// go through 2 dim array cost and see west /north / south
-		// if (on second lane: i==1) cost[i][j] = min(w, n, s)
+		// if (on second lane: i==1 && cost[i][j] == MAX) cost[i][j] = min(w, n, s)
 		for (int i = 0; i < costs.length; i++) {
 			for (int j = 0; j < 3; j++) {
 
@@ -71,22 +68,20 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 		return min;
 	}
 
-	private void markAsPaths(int[][] visited, int[][] costs) {
-		for (int i = 1; i < visited.length - 1; i++) {
+	private void markQuestionable() {
+		for (int i = 1; i < costs.length - 1; i++) {
 			for (int j = 0; j < 3; j++) {
-				if (visited[i][j] != 2) costs[i][j] = Integer.MAX_VALUE;
+				if (costs[i][j] != -1) costs[i][j] = Integer.MAX_VALUE;
 			}
 		}
 	}
 
-	private void markObstacles(int[] obstacles, int[][] visited, int[][] costs) {
+	private void markObstacles(int[] obstacles) {
 		for (int i = 1; i < obstacles.length-1; i++) {
 			if (obstacles[i] == 0) {
 				continue;
 			}
 			int laneIndex = obstacles[i] - 1;
-
-			visited[i][laneIndex] = 2; // 2 as obstacle
 			costs[i][laneIndex] = -1;
 			// -1 as obstacle, displayed as X
 			// MAX displayed as ?
@@ -101,15 +96,6 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 				else if (a[i][j] == -1) value = "X";
 				else value = a[i][j] + "";
 				System.out.print(value);
-			}
-			System.out.println();
-		}
-	}
-
-	void print2DimArray(int[][] a) {
-		for (int i = 0; i < a.length; i++) {
-			for (int j = 0; j < a[i].length; j++) {
-				System.out.print(a[i][j]);
 			}
 			System.out.println();
 		}
