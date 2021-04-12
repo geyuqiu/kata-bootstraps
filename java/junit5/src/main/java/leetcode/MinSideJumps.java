@@ -9,7 +9,7 @@ package leetcode;
  * side jump: jump over 1 rock on the 2 lane (moving 2 fields)
  */
 public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/problems/minimum-sideway-jumps,
-	char[][] costs; // dp
+	int[][] costs; // dp
 	public int minSideJumps(int[] obstacles) { // time: O(3n), space: O(3n)
 		int n = obstacles.length;
 		if (n < 3) return 0;
@@ -20,7 +20,7 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 		}
 		if (!obstacleMetOnSecondLane) return 0;
 
-		costs = new char[n][3]; // dp
+		costs = new int[n][3]; // dp
 		markObstacles(obstacles);
 		initializeCosts(n);
 		markQuestionable();
@@ -34,31 +34,29 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 
 	private void initializeCosts(int n) {
 		// costs at 0. and n-1. are obvious
-		costs[0][0] = '1';
-		costs[0][1] = '0';
-		costs[0][2] = '1';
-		costs[n-1][0] = '0';
-		costs[n-1][1] = '0';
-		costs[n-1][2] = '0';
+		costs[0][0] = 1;
+		costs[0][1] = 0;
+		costs[0][2] = 1;
+		costs[n-1][0] = 0;
+		costs[n-1][1] = 0;
+		costs[n-1][2] = 0;
 	}
 
 	private void fillCosts() {
 		// go through 2 dim array cost and see west /north / south
-		// if (on second lane: i==1 && cost[i][j] == MAX) cost[i][j] = min(w, n+1, s+1)
+		// if (on second lane: i==1 && cost[i][j] == MAX) cost[i][j] = min(w, n, s)
 		for (int i = 1; i < costs.length - 1; i++) {
-			for (int j = 0; j < 3; j++) { // west is always available
-//				if (j==0) costs[i][j] = Math.min(); // only north, but think about jumping ...
-//				else if (j==2) costs[i][j] = Math.min(); // only south, think about jumping ...
-//				else costs[i][j] = Math.min(Math.min((costs[i-1][j]), costs[i][j+1] + 1), costs[i][j-1] + 1);
+			for (int j = 0; j < 3; j++) {
+
 			}
 		}
 	}
 
-	private int getMin(char[][] costs) {
+	private int getMin(int[][] costs) {
 		int min = Integer.MAX_VALUE;
 		int i = costs.length - 2;
 		for (int j = 0; j < 3; j++) {
-			if (costs[i][j] > '0' && costs[i][j] - '0' < min) min = costs[i][j] - '0';
+			if (costs[i][j] > 0 && costs[i][j] < min) min = costs[i][j];
 		}
 		return min;
 	}
@@ -66,7 +64,7 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 	private void markQuestionable() {
 		for (int i = 1; i < costs.length - 1; i++) {
 			for (int j = 0; j < 3; j++) {
-				if (costs[i][j] != '*') costs[i][j] = Character.MAX_VALUE;
+				if (costs[i][j] != -1) costs[i][j] = Integer.MAX_VALUE;
 			}
 		}
 	}
@@ -77,18 +75,18 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 				continue;
 			}
 			int laneIndex = obstacles[i] - 1;
-			costs[i][laneIndex] = '*';
-			// * as obstacle, displayed as X
+			costs[i][laneIndex] = -1;
+			// -1 as obstacle, displayed as X
 			// MAX displayed as ?
 		}
 	}
 
-	void print2DimCost(char[][] a) {
+	void print2DimCost(int[][] a) {
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[i].length; j++) {
 				String value = "";
-				if (a[i][j] == Character.MAX_VALUE) value = "?";
-				else if (a[i][j] == '*') value = "X";
+				if (a[i][j] == Integer.MAX_VALUE) value = "?";
+				else if (a[i][j] == -1) value = "X";
 				else value = a[i][j] + "";
 				System.out.print(value);
 			}
