@@ -50,7 +50,7 @@ class MKAverage { // space: O(n), time: O(n * logm) for BST insertion and deleti
 
 		while (low <= high) {
 			int mid = (low + high) >>> 1;
-			long midVal = nums.get(mid);
+			long midVal = nums.get(sortedSlidingWindowIndexes.get(mid));
 
 			if (midVal < key)
 				low = mid + 1;
