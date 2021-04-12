@@ -6,35 +6,28 @@ package leetcode;
  * no obstacles on second lane, then done
  * every point max 1 obstacle
  * there is always a way to get to the goal: normally moving (if greedy, but do we get a validi solution going greedy ?)
- 	* first east, then north / south, for greedy, if doing dfs / greedy, if meeting dead end then go back to start?
- * side jump: jump over 1 rock on the 2 lane (moving 2 fields)
+ 	* first east, then north / south, for greedy, if doing dfs / greedy, if meeting dead end then go back to start, so questionable run time?
+ * side jump: jump over 1 rock / free space on the 2 lane (moving 2 fields at once !)
  */
 public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/problems/minimum-sideway-jumps,
 	int[][] costs; // dp
 	int INT_MAX = Integer.MAX_VALUE - 1000;
-	int OBSTACLE = Integer.MAX_VALUE - 100000;
-	public int minSideJumps(int[] obstacles) { // time: O(3n), space: O(3n)
+	int OBSTACLE = Integer.MAX_VALUE - 100000; // acceptable for n<=500000
+	public int minSideJumps(int[] obstacles) { // time: O(n), space: O(n)
 		int n = obstacles.length;
 		if (n < 3) return 0;
 
-		boolean obstacleMetOnSecondLane = false;
-		for (int i = 1; i < n - 1; i++) {
-			if (obstacles[i] == 2) obstacleMetOnSecondLane = true;
-		}
-		if (!obstacleMetOnSecondLane) return 0;
-
-		costs = new int[n][3]; // dp
+		costs = new int[n][3];
 		markObstacles(obstacles);
 		initializeCosts(n);
 		markQuestionable();
 
-		print2DimCost(costs);
-		System.out.println();
+//		print2DimCost(costs);
+//		System.out.println();
 
 		fillCosts();
-		print2DimCost(costs);
-		int r = getMin(costs);
-		return r;
+//		print2DimCost(costs);
+		return getMin(costs);
 	}
 
 	private void initializeCosts(int n) {
@@ -59,31 +52,27 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 		}
 	}
 
-	private void propogateLocalMax(int i, int j) {
+	private void propogateLocalMax(int i, int j) { // calc best forward moves to right, up and down (since only 3 lanes no need to turn back)
 		if (!isObstacle(right(i, j))) costs[i + 1][j] = Math.min(right(i, j), costs[i][j]);
 		if (j == 0) {
 			if (!isObstacle(up(i, j))) costs[i][j + 1] = Math.min(up(i, j), costs[i][j] + 1);
-			if (!isObstacle(upJump(i, j)) && isObstacle(up(i,j))) costs[i][j + 2] = Math.min(upJump(i, j), costs[i][j]+1);
+			if (!isObstacle(upJump(i, j))) costs[i][j + 2] = Math.min(upJump(i, j), costs[i][j]+1);
 		} else if (j == 2) {
 			if (!isObstacle(down(i, j))) costs[i][j - 1] = Math.min(down(i, j), costs[i][j] + 1);
-			if (!isObstacle(downJump(i, j)) && isObstacle(down(i, j))) costs[i][j - 2] = Math.min(downJump(i, j), costs[i][j]+1);
+			if (!isObstacle(downJump(i, j))) costs[i][j - 2] = Math.min(downJump(i, j), costs[i][j]+1);
 		} else {
 			if(!isObstacle(up(i, j))) costs[i][j+1] = Math.min(up(i, j), costs[i][j] + 1);
 			if(!isObstacle(down(i, j))) costs[i][j-1] = Math.min(down(i, j), costs[i][j] + 1);
 		}
 	}
 
-	private void calcLocalMax(int i, int j) { // if (on second lane: i==1 && cost[i][j] != OBSTACLE) cost[i][j] = min(w, n, s)
+	private void calcLocalMax(int i, int j) { // if (on second lane: i==1 && cost[i][j] != OBSTACLE) cost[i][j] = min(left, up, down, [jump])
 		if (j == 0) {
-			costs[i][j] = Math.min(left(i, j), up(i, j) + 1); // only north, but think about jumping if north field is an obstacle...
-			if (isObstacle(up(i, j))) {
-				costs[i][j] = Math.min(costs[i][j], upJump(i, j) + 1);
-			}
+			costs[i][j] = Math.min(left(i, j), up(i, j) + 1); // only north, but think about jumping
+			costs[i][j] = Math.min(costs[i][j], upJump(i, j) + 1);
 		} else if (j == 2) {
 			costs[i][j] = Math.min(left(i, j), down(i, j) + 1);
-			if (isObstacle(down(i, j))) {
-				costs[i][j] = Math.min(costs[i][j], downJump(i, j) + 1); // only south, think about jumping ...
-			}
+			costs[i][j] = Math.min(costs[i][j], downJump(i, j) + 1); // only south, think about jumping over obstacle does not matter! can also jump over free path
 		} else {
 			costs[i][j] = Math.min(Math.min(left(i, j), up(i, j) + 1), down(i, j) + 1);
 		}
@@ -119,9 +108,9 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 
 	private int getMin(int[][] costs) {
 		int min = INT_MAX;
-		int i = costs.length - 2;
+		int i = costs.length - 2; // no costs for last point
 		for (int j = 0; j < 3; j++) {
-			if (costs[i][j] > 0 && costs[i][j] < min) min = costs[i][j];
+			 min = Math.min(min, costs[i][j]);
 		}
 		return min;
 	}
@@ -141,18 +130,18 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 			}
 			int laneIndex = obstacles[i] - 1;
 			costs[i][laneIndex] = OBSTACLE;
-			// OBSTACLE as obstacle, displayed as X
-			// MAX displayed as ?
 		}
 	}
 
 	void print2DimCost(int[][] a) {
+		// OBSTACLE as obstacle, displayed as X
+		// MAX displayed as ?
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[i].length; j++) {
 				String value = "";
-				if (a[i][j] == INT_MAX) value = "?";
-				else if (a[i][j] == OBSTACLE) value = "X";
-				else value = a[i][j] + "";
+				if (a[i][j] == INT_MAX) value = "? ";
+				else if (a[i][j] == OBSTACLE) value = "X  ";
+				else value = a[i][j] + " ";
 				System.out.print(value);
 			}
 			System.out.println();
