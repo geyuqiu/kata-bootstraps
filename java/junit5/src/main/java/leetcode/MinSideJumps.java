@@ -54,10 +54,9 @@ public class MinSideJumps { // https://leetcode.com/contest/weekly-contest-236/p
 
 	private int getMin(int[][] costs) {
 		int min = Integer.MAX_VALUE;
-		for (int i = 0; i < costs.length; i++) {
-			for (int j = 0; j < 3; j++) {
-				if (costs[i][j] > 0 && costs[i][j] < min) min = costs[i][j];
-			}
+		int i = costs.length - 2;
+		for (int j = 0; j < 3; j++) {
+			if (costs[i][j] > 0 && costs[i][j] < min) min = costs[i][j];
 		}
 		return min;
 	}
