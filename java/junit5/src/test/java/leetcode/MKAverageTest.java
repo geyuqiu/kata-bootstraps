@@ -59,7 +59,6 @@ class MKAverageTest {
 	}
 
 	@Test
-	@Disabled
 	void calculateMKAverage5() {
 		mkAverage = new MKAverage(3, 1);
 		mkAverage.addElement(3);        // current elements are [3]
@@ -80,7 +79,6 @@ class MKAverageTest {
 		assertEquals(5, last);
 	}
 
-	@Disabled
 	@Test void
 	addInTheMiddleOfSlidingWindow() { // [1, 10], add 3 -> [1, 3, 10]
 		mkAverage = new MKAverage(3, 1);
@@ -96,7 +94,6 @@ class MKAverageTest {
 		);
 	}
 
-	@Disabled
 	@Test void
 	slideByRemovingElement() { // [1, 10, 3]:[0, 2, 1] remove 0th elem -> [3, 10]
 		mkAverage = new MKAverage(3, 1);
