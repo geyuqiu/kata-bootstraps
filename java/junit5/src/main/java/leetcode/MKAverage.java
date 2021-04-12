@@ -6,8 +6,11 @@ import java.util.List;
 
 /**
  * @author YUQIU
+ * n: 10^5
+ * m: 10^5
+ * k: 10^5 / 2
  */
-class MKAverage { // space: O(n), time: O(n) but for sorting alone: O(klogk)
+class MKAverage { // space: O(n), time: O(n) but for sorting alone: O(n * mlogm)
 
 	int m;
 	int k;
@@ -20,7 +23,7 @@ class MKAverage { // space: O(n), time: O(n) but for sorting alone: O(klogk)
 		this.intList = new ArrayList<>();
 	}
 
-	public void addElement(int num) { // calc max in stack ?
+	public void addElement(int num) { // how to keep sorting ?
 		this.intList.add(num);
 	}
 
@@ -31,7 +34,7 @@ class MKAverage { // space: O(n), time: O(n) but for sorting alone: O(klogk)
 		// int min = value;
 		// int max = value;
 
-		List<Integer> lastElems = new ArrayList<>();
+		List<Integer> lastElems = new ArrayList<>(); // as priority queue ? then still mlogm
 		for (int i = n - 1; i >= n - m; i--) {
 			lastElems.add(intList.get(i));
 		}
@@ -47,7 +50,7 @@ class MKAverage { // space: O(n), time: O(n) but for sorting alone: O(klogk)
 //			i++;
 //		}
 
-		Collections.sort(lastElems); // Remove the smallest k elements and the largest k elements from the container.: no sorting but based on indexes?
+		Collections.sort(lastElems); // bottle neck
 //		System.out.println(lastElems);
 		return average(lastElems, k, lastElems.size() - k - 1); // m=6, k=1 -> average([1, 3, 3, 4, 5, 12], 1, 4), #nums = 4-1+1
 	}

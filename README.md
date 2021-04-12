@@ -220,6 +220,10 @@ What would the runtime be ?
 
 ### typical big o runtime: 
 * isPrime: `O (sqrt n)`
+* PriorityQueue:
+    * insertion: `O(log(n))`
+    * contains / search: `O(n)`
+    *  
 * factorial: n! -> `O(n)`
 * fibonacci without memoization: O(2<sup>n</sup>) or O(1.6<sup>n</sup>): at the bottom of the call stack,there is sometimes only one call. 
 * fibonacci with memoization (iterative / recursive): `O(n)`
