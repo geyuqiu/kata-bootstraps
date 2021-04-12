@@ -27,24 +27,9 @@ class MKAverage { // space: O(n), time: O(n) but for sorting alone: O(n * mlogm)
 		nums.add(num);
 	}
 
-	int averageInQueue(Queue<Integer> indexQueue) { // O(k)
+	int calculateMKAverage() {
 		long sum = 0L;
-		int i = 0;
-		while (!indexQueue.isEmpty()) {
-			int num = indexQueue.poll();
-			if (i >= k && i <= indexQueue.size() - k - 1) {
-				sum += num;
-			}
-			i++;
-		}
-//		 System.out.println(sum);
-
-		return Math.round(sum / (m - 2 * k));
-	}
-
-	int averageInList(List<Integer> l) {
-		long sum = 0L;
-		for (int i = k; i <= l.size() - k - 1; i++) sum += (long) l.get(i);
+		for (int i = k; i <= m - k - 1; i++) sum += (long) sortedSlidingWindow.get(i);
 
 		return Math.round(sum / (m - 2 * k));
 	}
