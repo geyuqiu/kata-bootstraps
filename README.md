@@ -12,6 +12,7 @@ and practicing mostly on platforms like Leetcode.
 | 1670 | [front-middle-back-queue][1670]                                   |                                            |
 | 1684 | [CountConsistentStrings][1684]                                    | Hash Table                                 |
 | 1812 | [square-is-white][1812]                                           |                                            |
+| 1800 | [max-ascending-sum][1800]                                           |                                            |
 | 1813 | [are-sentences-similar][1813]                                     | LinkedList                                 |
 | 1814 | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                 |
 | 1815 | [max-happy-groups][1815]                                          | dfs, dp                                    |
@@ -30,6 +31,7 @@ and practicing mostly on platforms like Leetcode.
 [239]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java
 [1670]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FrontMiddleBackQueue.java
 [1684]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountConsistentStrings.java
+[1800]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxAscendingSum.java
 [1812]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/SquareIsWhite.java
 [1813]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/AreSentencesSimilar.java
 [1814]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountNicePairs.java
@@ -195,6 +197,14 @@ note down the mistakes that are discovered by ide syntax highlighting, compiler 
 | `Conflicts` |  more documentation  |  priorities of tests vs code guidelines like (tab vs space)  |  
 | `technical decisions && tradeoffs` |    |       |   
 | `What you'd do differently` |    |  be more patient and kind to address problems and introduce change to a team  | 
+
+concrete examples:
+
+1. I began my career without proper TDD knowledge, but after working with senior developers and attending training from them. And simply by doing pair programming with them.
+I gathered knowledge from them, how to do TDD. And now I am pretty comfortable applying tdd.
+2. Get designs to pixel perfect (1:1) implementation, 4 eyes principle: In Frontend development, it is important to get pixel perfect implementation for mockups. After one UX-colleague mentioned that 
+in retrospective that the implementation could be better. I tried to meet every margin, padding, color  requirements etc.. Sometimes also doing the review with others (4+ eyes principle). And in the last retrospective the ux colleague even praised that almost every implementation looked good and was accepted right away
+3. Improve communication skills: At start of the career, I was sometimes not mentioning the context when switching topics or not able to explain technical terms clear enough. But after it was explicitly mentioned from senior colleagues, I tried to pay attention to that, and imagine what the others already know, and tried to put myself into their shoes and guide everyone when communicating. So in this regard, it was much better in the recent months. 
 
 ## how to ask questions
 

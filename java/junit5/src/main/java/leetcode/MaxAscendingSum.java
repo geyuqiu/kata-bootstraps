@@ -4,7 +4,20 @@ package leetcode;
  * @author YUQIU
  */
 public class MaxAscendingSum { // https://leetcode.com/problems/maximum-ascending-subarray-sum/submissions/
+	int maxAscendingSum(int[] nums) { // O(n)
+		int max = nums[0];
+		int result = max;
 
+		for (int i = 1; i < nums.length; i++) {
+			if (nums[i] > nums[i - 1]) {
+				max = max + nums[i];
+				result = Math.max(result, max);
+			} else {
+				max = nums[i];
+			}
+		}
+		return result;
+	}
 
 	int maxAscendingSumBruteforce(int[] nums) { // O(n^2)
 		int sum = 0;
