@@ -6,23 +6,26 @@ and practicing mostly on platforms like Leetcode.
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                       |
 | :--- | :---------------------------------------------------------------- | :------------------------------------------|
-|  78  | [Subsets][78]                                               | backtracking                                        |
-|  47  | [PermuteUnique][47]                                               | backtracking                                        |
+|  78  | [subsets][78]                                               | backtracking                                        |
+|  47  | [permute-unique][47]                                               | backtracking                                        |
 |  239 | [max-sliding-window][239]                                         | LinkedList                                 |
 | 1670 | [front-middle-back-queue][1670]                                   |                                            |
 | 1684 | [CountConsistentStrings][1684]                                    | Hash Table                                 |
 | 1812 | [square-is-white][1812]                                           |                                            |
-| 1800 | [max-ascending-sum][1800]                                           |                                            |
+| 1800 | [max-ascending-sum][1800]                                         |                                            |
 | 1813 | [are-sentences-similar][1813]                                     | LinkedList                                 |
 | 1814 | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                 |
 | 1815 | [max-happy-groups][1815]                                          | dfs, dp                                    |
 | 1816 | [truncate-sentence][1816]                                         |                                            |
 | 1817 | [finding-users-active-minutes][1817]                              | Hash Table                                 |
 | 1818 | [min-absolute-sum-diff][1818]                                     |                                            |
-| 1822 | [array-sign][1822]                                     |                                            |
-| 1823 | [find-the-winner][1823]                                     |                                            |
-| 1824 | [min-side-jumps][1824]                                     |                                            |
-| 1825 | [m-k-average][1825]                                     |                                            |
+| 1822 | [array-sign][1822]                                                |                                            |
+| 1823 | [find-the-winner][1823]                                           |                                            |
+| 1824 | [min-side-jumps][1824]                                            |                                            |
+| 1825 | [m-k-average][1825]                                               | Binary Search, maxSlidingWindow (239)            |
+| 1827 | [min-operations][1827]                                               |              |
+| 1828 | [count-points][1828]                                               |              |
+| 1829 | [get-maximum-xor][1829]                                               |              |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -43,6 +46,9 @@ and practicing mostly on platforms like Leetcode.
 [1823]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FindTheWinner.java
 [1824]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MinSideJumps.java
 [1825]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MKAverage.java
+[1827]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MinOperations.java
+[1828]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountPoints.java
+[1829]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/GetMaximumXor.java
 
 ## current progress: 
 p. 112
