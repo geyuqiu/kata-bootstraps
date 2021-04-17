@@ -26,15 +26,12 @@ public class MaxAscendingSum { // https://leetcode.com/problems/maximum-ascendin
 		for (int i = 0; i < nums.length; i++) {
 			sum = 0;
 			result = 0;
-			// System.out.println(sum);
 			for (int j = i; j < nums.length; j++) {
 
 				if (j + 1 < nums.length && nums[j + 1] > nums[j]) {
 					sum += nums[j];
-					//  System.out.println("if: " + sum);
 				} else {
 					result = Math.max(result, sum + nums[j]);
-					// System.out.println("else: " + result);
 					sum = nums[i];
 					break;
 				}
