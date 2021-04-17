@@ -43,7 +43,7 @@ and practicing mostly on platforms like Leetcode.
 [1825]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MKAverage.java
 
 ## current progress: 
-p. 99
+p. 112
 
 chapters to skip: 
 * chapter 12: 158 - 163
@@ -62,6 +62,13 @@ chapters to skip:
     * try to avoid special cases
 * explain a **brute force** asap (not code it), slow but works, **stating time and space complexity**
     * **data structure brainstorm**: e.g. LinkedList, HashMap etc.
+        * stack
+            * useful for backtracking, push temporary data onto a stack 
+        as you recurse, but then remove them as you backtrack (for example, because the recursive check failed) 
+            * use stack to implement a recursive algorithm iteratively
+        * Queue
+            * useful for BFS traversal
+            * 
     * if brute force not possible, have there been any similar algorithms before that was solved
     * makes sense if misheard the concept / task
     * state the runtime: O()
@@ -227,6 +234,8 @@ What would the runtime be ?
     * sum: O(a * s log s) + O( a * s log a) = O(a*s(log a + log s))
 
 ### typical big o runtime: 
+
+#### time
 * https://www.baeldung.com/java-collections-complexity
 * isPrime: `O (sqrt n)`
 * ArrayList
@@ -287,6 +296,9 @@ What would the runtime be ?
             return curr;
         } 
     }
+
+#### space
+* recursion requires minimum O(n) space, n being the depth
 
 ## how to introduce yourself
 * highlights 
