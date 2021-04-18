@@ -50,7 +50,7 @@ and practicing mostly on platforms like Leetcode.
 [1827]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MinOperations.java
 [1828]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountPoints.java
 [1829]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/GetMaximumXor.java
-[1832]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/checkIfPangram.java
+[1832]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/CheckIfPangram.py
 
 ## current progress: 
 p. 112
