@@ -1,4 +1,4 @@
-class CheckIfPangram:
+class CheckIfPangram: # https://leetcode.com/problems/check-if-the-sentence-is-pangram
 
     def checkIfPangram(self, sentence: str) -> bool:
         N = len(sentence)
