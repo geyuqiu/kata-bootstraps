@@ -26,6 +26,7 @@ and practicing mostly on platforms like Leetcode.
 | 1827 | [min-operations][1827]                                               |              |
 | 1828 | [count-points][1828]                                               |              |
 | 1829 | [get-maximum-xor][1829]                                               |              |
+| 1832 | [check-if-pangram][1832]                                               |              |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -49,6 +50,7 @@ and practicing mostly on platforms like Leetcode.
 [1827]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MinOperations.java
 [1828]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountPoints.java
 [1829]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/GetMaximumXor.java
+[1832]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/checkIfPangram.java
 
 ## current progress: 
 p. 112
