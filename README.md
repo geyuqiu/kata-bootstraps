@@ -3,6 +3,9 @@
 Following is my notes and source code when reading crackingTheCodingInterviewBook 
 and practicing mostly on platforms like Leetcode.
 
+## current progress: 
+p. 114
+
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                       |
 | :--- | :---------------------------------------------------------------- | :------------------------------------------|
@@ -53,9 +56,6 @@ and practicing mostly on platforms like Leetcode.
 [1829]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/GetMaximumXor.java
 [1832]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/checkIfPangram.py
 [1833]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/maxIceCream.py
-
-## current progress: 
-p. 112
 
 chapters to skip: 
 * chapter 12: 158 - 163
@@ -350,6 +350,17 @@ keep trying when you are stuck, pay attention to what the interview is saying
 * These complaints aren't without merit: 
     * answer/solution can be found by googling
     * rarely have to use data structures such as binary search trees in the real world
+    * tree structure properties
+        * balanced, binary?, complete: filled left to right, full: no nodes have only 1 child (either none or 2), perfect (exactly 2<sup>k</sup> - 1 nodes): full + complete, 
+        * traversal
+            * preorder: DFS
+            * Inorder: left leaf -> parent -> right leaf 
+            * postorder: leaf nodes first (root node last to be visited)
+    * heap
+        * min-heap: complete binary tree, root node smaller than children
+        * O(1): find min, root node being the smallest
+        * O(logn) remove min: first remove and swap with right-most child node, then doing it recursively (taking smaller one from left and right children)
+        * O(logn) insert node at bottom (maintaining complete tree property) and then heapify (swap child with parent if child < parent)
     * whiteboard coding: artificial env, would never code on whiteboard in real world, but java 8 did indicate that for beginner, this is a good way to learn ;) 
 * but 
     * From the company's perspective, it's actually acceptable that some good candidates are rejected. (acceptaable tradeoff)
