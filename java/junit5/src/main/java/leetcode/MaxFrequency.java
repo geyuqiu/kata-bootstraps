@@ -13,10 +13,10 @@ public class MaxFrequency {
 		int temp;
 		int c;
 		Arrays.sort(nums);
-		for (int i = 1; i < nums.length; i++) {
+		for (int i = nums.length-1; i >= 0; i--) {
 			temp = k;
 			c = 0;
-			for (int j = 2; j <= i; j++) {
+			for (int j = i; j >= 0; j--) {
 				temp -= nums[i] - nums[j];
 				if (temp<0) {
 					break;
