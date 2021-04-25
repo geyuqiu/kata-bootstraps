@@ -31,6 +31,7 @@ p. 116
 | 1829 | [get-maximum-xor][1829]                                               |              |
 | 1832 | [check-if-pangram][1832]                                               |              |
 | 1833 | [max-ice-cream][1833]                                               |              |
+| 1837 | [sum-base][1837]                                               |              |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -56,6 +57,7 @@ p. 116
 [1829]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/GetMaximumXor.java
 [1832]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/checkIfPangram.py
 [1833]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/maxIceCream.py
+[1837]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/sumBase.py
 
 chapters to skip: 
 * chapter 12: 158 - 163
