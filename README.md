@@ -244,8 +244,8 @@ project planning happen on the team?"
 * https://www.bigocheatsheet.com/
 * recursion in n steps takes O(n) space: adds a level to the call stack, occupies memory
 * hidden runtime
-    * O(1), but also O(n): reallocation of a new arrayList while doubling capacity after running out of space
-    * O(n): for String concatenation, e.g. str1 + str2
+    * `O(1)`, but also `O(n)`: reallocation of a new arrayList while doubling capacity after running out of space
+    * `O(n)`: for String concatenation, e.g. str1 + str2
     * 
 * Example: an algorithm that took in an array (array length: **a**) of strings (longest string length: **s**), 
 sorted each string, and then sorted the full array. 
@@ -253,7 +253,7 @@ What would the runtime be ?
     * sort each string: `O(s log s)`
     * do this for s strings, so that's `O(a * s log s)`
     * sort full array while comparing the strings O(s): `O( a * s log a)` because of O(a log a)comparisons
-    * sum: O(a * s log s) + O( a * s log a) = O(a*s(log a + log s))
+    * sum: `O(a * s log s)` + `O( a * s log a)` = `O(a*s(log a + log s))`
 
 ### typical big o runtime: 
 
