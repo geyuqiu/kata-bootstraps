@@ -4,7 +4,7 @@ Following is my notes and source code when reading crackingTheCodingInterviewBoo
 and practicing mostly on platforms like Leetcode.
 
 ## current progress: 
-p. 118
+p. 120
 
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                       |
@@ -363,20 +363,52 @@ keep trying when you are stuck, pay attention to what the interview is saying
     * prefix tree: a look up data structure for storing all words in english language 
     * O(S): check if string is valid prefix
 * graph
-    * acyclic vs cyclic
+    * acyclic vs cyclic (check if node already visited when searching)
     * directed vs undirected
     * represented by 
         * adjacency list: an edge is stored twice in undirected graph
         * (boolean) adjacency matrix: may be symmetric in a undirected graph
-    * search
-        * dfs (preorder traversal of a tree)
-            ![](img/dfs.png)
-        * graph bfs
-            ![](img/bfs.png)
-        * tree bfs
-            ![](img/bfsTree.png)
-        * Dijkstra’s
-            ![](img/dijkstra.png)
+* dfs (preorder traversal of a tree, more simpler code because of recursive solution)
+    ![](img/dfs.png)
+
+
+    void search(Node root) {
+        if (root== null) return;
+        visit(root);
+        root.visited= true;
+        for (Node n: root.adjacent) {
+            if (n.visited == false) {
+                search(n);
+            }
+        }
+    }
+    
+* graph bfs: used for any shortest paths / path of friendship between a and b utilizing queue (LinkedList)
+    * bidirectional search: 2 BFS at the same time from 2 endpoints (meet in the middle)
+    ![](img/bfs.png)
+    
+    
+    void search(Node root) {
+        LinkedList queue = new LinkedList();
+        root.marked= true;
+        queue.addLast(root); // Add to the end of queue
+        while (!queue.isEmpty()) {
+            Node r= queue.removeFirst(); // Remove from the front of the queue
+            visit(r);
+            for (Node n in r.adjacent) {
+                if (n.marked== false) {
+                    n.marked= true;
+                    queue.addLast(n);
+                }
+            }
+        }
+    }    
+       
+            
+* tree bfs
+    ![](img/bfsTree.png)
+* Dijkstra’s
+    ![](img/dijkstra.png)
 
 ## doubts about the book
 
