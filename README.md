@@ -250,9 +250,9 @@ project planning happen on the team?"
 * Example: an algorithm that took in an array (array length: **a**) of strings (longest string length: **s**), 
 sorted each string, and then sorted the full array. 
 What would the runtime be ?
-    * sort each string: **O(s log s)**
-    * do this for s strings, so that's **O(a * s log s)**
-    * sort full array while comparing the strings O(s): **O( a * s log a)** because of O(a log a)comparisons
+    * sort each string: `O(s log s)`
+    * do this for s strings, so that's `O(a * s log s)`
+    * sort full array while comparing the strings O(s): `O( a * s log a)` because of O(a log a)comparisons
     * sum: O(a * s log s) + O( a * s log a) = O(a*s(log a + log s))
 
 ### typical big o runtime: 
@@ -261,20 +261,20 @@ What would the runtime be ?
 * https://www.baeldung.com/java-collections-complexity
 * isPrime: `O (sqrt n)`
 * ArrayList
-    * add, get vs `add(index, element), remove(), indexOf()`: O(1) vs `O(n)`
+    * add, get vs `add(index, element), remove(), indexOf()`: `O(1)` vs `O(n)`
 * LinkedList
-    * add(), remove vs `get()`: O(1) vs `O(n)`
+    * add(), remove vs `get()`: `O(1)` vs `O(n)`
 * PriorityQueue:
     * insertion: `O(log(n))`
     * contains / search: `O(n)`
 * TreeMap / TreeSet
     * put(), get(), remove(), containsKey():  `O(log n)`
 * Set
-    * add(), remove(), contains(): O(1) 
+    * add(), remove(), contains(): `O(1)`
 * factorial: n! -> `O(n)`
 * fibonacci without memoization: O(2<sup>n</sup>) or O(1.6<sup>n</sup>): at the bottom of the call stack,there is sometimes only one call. 
 * fibonacci with memoization (iterative / recursive): `O(n)`
-* greatest common divisor as gcd(a,b) and least common multiple as a*b/gcd(a, b): O(log(a+b)
+* greatest common divisor as gcd(a,b) and least common multiple as a*b/gcd(a, b): `O(log(a+b)`
 
 ```
 def gcd(a, b):
@@ -284,7 +284,7 @@ def gcd(a, b):
         return gcd(b, a % b)
 ```
 
-* get all permutations of a string: **O(n * n * n!)** including string concatenation
+* get all permutations of a string: `O(n * n * n!)` including string concatenation
 
         
 ```
