@@ -4,7 +4,7 @@ Following is my notes and source code when reading crackingTheCodingInterviewBoo
 and practicing mostly on platforms like Leetcode.
 
 ## current progress: 
-p. 117
+p. 118
 
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                       |
@@ -348,26 +348,36 @@ keep trying when you are stuck, pay attention to what the interview is saying
 * debug with couples of test cases manually on whiteboard
 
 ## tree structure properties
-    * acyclic connected (path between every pair of vertices) graph
-    * balanced, binary?, complete: filled left to right, full: no nodes have only 1 child (either none or 2), perfect (exactly 2<sup>k</sup> - 1 nodes): full + complete, 
-    * traversal
-        * preorder: DFS
-        * Inorder: left leaf -> parent -> right leaf 
-        * postorder: leaf nodes first (root node last to be visited)
-    * heap
-        * min-heap: complete binary tree, root node smaller than children
-        * O(1): find min, root node being the smallest
-        * O(logn) remove min: first remove and swap with right-most child node, then doing it recursively (taking smaller one from left and right children)
-        * O(logn) insert node at bottom (maintaining complete tree property) and then heapify (swap child with parent if child < parent)
-    * Tries
-        * prefix tree: a look up data structure for storing all words in english language 
-        * O(S): check if string is valid prefix
-    * graph
-        * acyclic vs cyclic
-        * directed vs undirected
-        * represented by 
-            * adjacency list
-            * adjacency matrix
+* acyclic connected (path between every pair of vertices) graph
+* balanced, binary?, complete: filled left to right, full: no nodes have only 1 child (either none or 2), perfect (exactly 2<sup>k</sup> - 1 nodes): full + complete, 
+* traversal
+    * preorder: DFS
+    * Inorder: left leaf -> parent -> right leaf 
+    * postorder: leaf nodes first (root node last to be visited)
+* heap
+    * min-heap: complete binary tree, root node smaller than children
+    * O(1): find min, root node being the smallest
+    * O(logn) remove min: first remove and swap with right-most child node, then doing it recursively (taking smaller one from left and right children)
+    * O(logn) insert node at bottom (maintaining complete tree property) and then heapify (swap child with parent if child < parent)
+* Tries
+    * prefix tree: a look up data structure for storing all words in english language 
+    * O(S): check if string is valid prefix
+* graph
+    * acyclic vs cyclic
+    * directed vs undirected
+    * represented by 
+        * adjacency list: an edge is stored twice in undirected graph
+        * (boolean) adjacency matrix: may be symmetric in a undirected graph
+    * search
+        * dfs (preorder traversal of a tree)
+            ![](img/dfs.png)
+        * graph bfs
+            ![](img/bfs.png)
+        * tree bfs
+            ![](img/bfsTree.png)
+        * Dijkstra’s
+            ![](img/dijkstra.png)
+
 ## doubts about the book
 
 * These complaints aren't without merit: 
