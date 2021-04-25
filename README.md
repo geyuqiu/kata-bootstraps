@@ -4,7 +4,7 @@ Following is my notes and source code when reading crackingTheCodingInterviewBoo
 and practicing mostly on platforms like Leetcode.
 
 ## current progress: 
-p. 116
+p. 117
 
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                       |
@@ -348,6 +348,7 @@ keep trying when you are stuck, pay attention to what the interview is saying
 * debug with couples of test cases manually on whiteboard
 
 ## tree structure properties
+    * acyclic connected (path between every pair of vertices) graph
     * balanced, binary?, complete: filled left to right, full: no nodes have only 1 child (either none or 2), perfect (exactly 2<sup>k</sup> - 1 nodes): full + complete, 
     * traversal
         * preorder: DFS
@@ -361,7 +362,12 @@ keep trying when you are stuck, pay attention to what the interview is saying
     * Tries
         * prefix tree: a look up data structure for storing all words in english language 
         * O(S): check if string is valid prefix
-
+    * graph
+        * acyclic vs cyclic
+        * directed vs undirected
+        * represented by 
+            * adjacency list
+            * adjacency matrix
 ## doubts about the book
 
 * These complaints aren't without merit: 
