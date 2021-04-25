@@ -276,48 +276,52 @@ What would the runtime be ?
 * fibonacci with memoization (iterative / recursive): `O(n)`
 * greatest common divisor as gcd(a,b) and least common multiple as a*b/gcd(a, b): O(log(a+b)
 
-
-    def gcd(a, b):
-        if a % b == 0:
-            return b
-        else:
-            return gcd(b, a % b)
+```
+def gcd(a, b):
+    if a % b == 0:
+        return b
+    else:
+        return gcd(b, a % b)
+```
 
 * get all permutations of a string: **O(n * n * n!)** including string concatenation
 
         
-    void permutation (String str) {
-        permutation(str, "");
-    }
+```
+void permutation (String str) {
+    permutation(str, "");
+}
 
-    void permutation(String str, String prefix) { // move character per character from str to prefix (permutation results)
-        if(str.length() == 0) {
-            System.out.println(prefix);
-        } else {
-            for (int i = 0; i < str.length(); i++) {
-                char cToBeRemoved = str.charAt(i);
-                String strWithCRemoved = str.substring(0, i) + str.substring(i+1);
-                permutation(strWithCRemoved, prefix + cToBeRemoved);
-            }
+void permutation(String str, String prefix) { // move character per character from str to prefix (permutation results)
+    if(str.length() == 0) {
+        System.out.println(prefix);
+    } else {
+        for (int i = 0; i < str.length(); i++) {
+            char cToBeRemoved = str.charAt(i);
+            String strWithCRemoved = str.substring(0, i) + str.substring(i+1);
+            permutation(strWithCRemoved, prefix + cToBeRemoved);
         }
     }
+}
+```
         
 * print all powers of 2 that are below n: `O(log n)`
 
-
-    int powers0f2(int n) {
-        if (n < 1) {
-            return 0;
-        } else if (n == 1) {
-            System.out.println(l);
-            return 1;
-        } else {
-            int prev = powers0f2(n / 2); // base case minimum 1
-            int curr = prev * 2; 
-            System.out.println(curr); 
-            return curr;
-        } 
-    }
+```
+int powers0f2(int n) {
+    if (n < 1) {
+        return 0;
+    } else if (n == 1) {
+        System.out.println(l);
+        return 1;
+    } else {
+        int prev = powers0f2(n / 2); // base case minimum 1
+        int curr = prev * 2; 
+        System.out.println(curr); 
+        return curr;
+    } 
+}
+```
 
 #### space
 * recursion requires minimum O(n) space, n being the depth
@@ -371,39 +375,40 @@ keep trying when you are stuck, pay attention to what the interview is saying
 * dfs (preorder traversal of a tree, more simpler code because of recursive solution)
     ![](img/dfs.png)
 
-
-    void search(Node root) {
-        if (root== null) return;
-        visit(root);
-        root.visited= true;
-        for (Node n: root.adjacent) {
-            if (n.visited == false) {
-                search(n);
-            }
+```
+void search(Node root) {
+    if (root== null) return;
+    visit(root);
+    root.visited= true;
+    for (Node n: root.adjacent) {
+        if (n.visited == false) {
+            search(n);
         }
     }
+}
+```
     
 * graph bfs: used for any shortest paths / path of friendship between a and b utilizing queue (LinkedList)
     * bidirectional search: 2 BFS at the same time from 2 endpoints (meet in the middle)
     ![](img/bfs.png)
     
-    
-    void search(Node root) {
-        LinkedList queue = new LinkedList();
-        root.marked= true;
-        queue.addLast(root); // Add to the end of queue
-        while (!queue.isEmpty()) {
-            Node r= queue.removeFirst(); // Remove from the front of the queue
-            visit(r);
-            for (Node n in r.adjacent) {
-                if (n.marked== false) {
-                    n.marked= true;
-                    queue.addLast(n);
-                }
+```
+void search(Node root) {
+    LinkedList queue = new LinkedList();
+    root.marked= true;
+    queue.addLast(root); // Add to the end of queue
+    while (!queue.isEmpty()) {
+        Node r= queue.removeFirst(); // Remove from the front of the queue
+        visit(r);
+        for (Node n in r.adjacent) {
+            if (n.marked== false) {
+                n.marked= true;
+                queue.addLast(n);
             }
         }
-    }    
-       
+    }
+}    
+```    
             
 * tree bfs
     ![](img/bfsTree.png)
