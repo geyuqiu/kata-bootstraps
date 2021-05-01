@@ -4,7 +4,7 @@ Following is my notes and source code when reading crackingTheCodingInterviewBoo
 and practicing mostly on platforms like Leetcode.
 
 ## current progress: 
-p. 120
+p. 125
 
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                       |
@@ -32,6 +32,9 @@ p. 120
 | 1832 | [check-if-pangram][1832]                                               |              |
 | 1833 | [max-ice-cream][1833]                                               |              |
 | 1837 | [sum-base][1837]                                               |              |
+| 1844 | [replace-digits][1844]                                               |              |
+| 1845 | [seat-manager][1845]                                               |              |
+| 1846 | [maximum-element-after-decrementing-and-rearranging][1846]                                               |              |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -58,6 +61,9 @@ p. 120
 [1832]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/checkIfPangram.py
 [1833]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/maxIceCream.py
 [1837]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/sumBase.py
+[1844]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/replaceDigits.py
+[1845]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/seatManager.py
+[1846]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/maximumElementAfterDecrementingAndRearranging.py
 
 chapters to skip: 
 * chapter 12: 158 - 163
@@ -239,6 +245,12 @@ project planning happen on the team?"
 * 2<sup>20</sup> =  10<sup>6</sup> = 1MB
 * 2<sup>30</sup> =  10<sup>9</sup> = 1GB
 * 2<sup>40</sup> =  10<sup>12</sup> = 1TB
+
+## binary bit shifting
+a: binary
+* a+a = a << 1, a * 4 = a << 2
+* a^(-a) = sequence of 1s
+* (=0 « 2) & 1011 = (sequence of 1s followed by 2 0s) AND 1011 clear last two bits of 1011 = 1000
 
 ## Big-O
 * https://www.bigocheatsheet.com/
