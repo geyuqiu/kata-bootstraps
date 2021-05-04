@@ -4,7 +4,7 @@ Following is my notes and source code when reading crackingTheCodingInterviewBoo
 and practicing mostly on platforms like Leetcode.
 
 ## current progress: 
-p. 125
+p. 137
 
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                       |
@@ -251,6 +251,7 @@ a: binary
 * a+a = a << 1, a * 4 = a << 2
 * a^(-a) = sequence of 1s
 * (=0 « 2) & 1011 = (sequence of 1s followed by 2 0s) AND 1011 clear last two bits of 1011 = 1000
+* O(1) operations: get-, set-, clear-, updateBit
 
 ## Big-O
 * https://www.bigocheatsheet.com/
@@ -351,6 +352,8 @@ int binarySearch0(int[] a, int fromIndex, int toIndex, int key) {
     return low;
 }
 ```
+* Sieve of Eratosthenes: `nlog(n)`
+* 
 
 #### space
 * recursion requires minimum O(n) space, n being the depth
