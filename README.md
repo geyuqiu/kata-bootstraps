@@ -4,7 +4,7 @@ Following is my notes and source code when reading crackingTheCodingInterviewBoo
 and practicing mostly on platforms like Leetcode.
 
 ## current progress: 
-p. 137
+p. 144 / 36
 
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                       |
@@ -12,6 +12,7 @@ p. 137
 |  78  | [subsets][78]                                               | backtracking                                        |
 |  47  | [permute-unique][47]                                               | backtracking                                        |
 |  239 | [max-sliding-window][239]                                         | LinkedList                                 |
+|  509 | [fib][509]                                         | Dynamic Programming                                 |
 | 1670 | [front-middle-back-queue][1670]                                   |                                            |
 | 1684 | [CountConsistentStrings][1684]                                    | Hash Table                                 |
 | 1812 | [square-is-white][1812]                                           |                                            |
@@ -41,6 +42,7 @@ p. 137
 [47]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/PermuteUnique.java
 [78]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Subsets.java
 [239]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java
+[509]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Fib.java
 [1670]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FrontMiddleBackQueue.java
 [1684]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountConsistentStrings.java
 [1800]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxAscendingSum.java
