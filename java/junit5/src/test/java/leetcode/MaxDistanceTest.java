@@ -22,7 +22,11 @@ class MaxDistanceTest {
 			Arguments.of(new int[]{55, 30, 5, 4, 2},new int[]{100, 20, 10, 10, 5}, 2),
 			Arguments.of(new int[]{2, 2, 2},new int[]{10, 10, 1}, 1),
 			Arguments.of(new int[]{30, 29, 19, 5},new int[]{25, 25, 25, 25, 25}, 2),
-			Arguments.of(new int[]{5,4},new int[]{3,2}, 0)
+			Arguments.of(new int[]{5,4},new int[]{3,2}, 0),
+			Arguments.of(
+				new int[]{9996, 9993, 9993, 9992, 9989, 9988, 9985, 9984, 9983, 9982, 9981, 9979, 9978},
+				new int[]{10000, 10000, 10000, 10000, 10000, 10000, 9999, 9998, 9998, 9998, 9998, 9997, 9997, 9996, 9996},
+				14)
 		);
 	}
 
