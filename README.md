@@ -4,7 +4,9 @@ Following is my notes and source code when reading crackingTheCodingInterviewBoo
 and practicing mostly on platforms like Leetcode.
 
 ## current progress: 
-p. 144 / 36
+p. 151 / 36
+
+still missing completing all interview questions ...
 
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                       |
@@ -36,6 +38,7 @@ p. 144 / 36
 | 1844 | [replace-digits][1844]                                               |              |
 | 1845 | [seat-manager][1845]                                               |              |
 | 1846 | [maximum-element-after-decrementing-and-rearranging][1846]                                               |              |
+| 1854 | [maximum-population][1854]                                               |   Hash Table           |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -66,6 +69,7 @@ p. 144 / 36
 [1844]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/replaceDigits.py
 [1845]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/seatManager.py
 [1846]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/maximumElementAfterDecrementingAndRearranging.py
+[1854]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaximumPopulation.java
 
 chapters to skip: 
 * chapter 12: 158 - 163
@@ -177,7 +181,7 @@ note down the mistakes that are discovered by ide syntax highlighting, compiler 
         * java stream methods, conversion between array, list and stream etc.
         * changing arraylist of int after adding it to an arraylist of arraylist has side effect (changing reference) --> add copy of the arrayList 
         * methods: `.contains` instead of `.containsKey()`
-        * interfaces: `Entry` instead of `Map.Entry`
+        * interfaces: `Entry` instead of `Map.Entry<Integer, Integer>` (java being too bitching about generics typing ?)
         * `https://mkyong.com/java/java-list-throws-unsupportedoperationexception/`
         * `ConcurrentModificationException`: modifying element in a set when iterating through it via foreach / iterator
         * typo: `,` instead of `;`, `Hashset` instead of `HashSet`, `.size` instead of `.size()`, missing `=` in `+=`
