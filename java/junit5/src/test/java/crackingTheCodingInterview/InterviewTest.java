@@ -23,7 +23,10 @@ class InterviewTest {
 				33),
 			Arguments.of(new String[]{"codility1", "codility3", "codility2", "codility4b", "codility4a"},
 				new String[]{"Wrong answer", "OK", "OK", "Time limit exceeded", "OK"},
-				50)
+				50),
+			Arguments.of(new String[]{"codility1", "codility3", "codility2a", "codility4b", "codility4a", "codility2b"},
+				new String[]{"Wrong answer", "OK", "OK", "Time limit exceeded", "OK", "Time limit exceeded"},
+				25)
 		);
 	}
 	@ParameterizedTest

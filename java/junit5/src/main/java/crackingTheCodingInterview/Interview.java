@@ -1,7 +1,7 @@
 package crackingTheCodingInterview;
 
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.Map;
 
 /**
  *
@@ -10,7 +10,8 @@ public class Interview {
 	int solution(String[] T, String[] R) {
 		int N = T.length;
 		int numberOfTasks;
-		HashMap<Integer, Character> hm = new HashMap<>();
+		int numberOfSuccessfulTask = 0;
+		HashMap<Integer, Character> hm = new HashMap<>(); // R: right, F: false
 
 		for (int i = 0; i < T.length; i++) {
 			char value = '\0';
@@ -22,7 +23,20 @@ public class Interview {
 					taskNumberDiscovered = true;
 				} else {
 					if (taskNumberDiscovered) {
-						hm.put(Integer.parseInt(key), value);
+						int keyI = Integer.parseInt(key);
+						if (value == '\0') {
+							if (R[i].equals("OK")) {
+								hm.put(keyI, 'T');
+							} else {
+								hm.put(keyI, 'F');
+							}
+						} else { // group
+							if (R[i].equals("OK")) {
+								if (hm.get(keyI) == null || hm.get(keyI) != 'F') hm.put(keyI, 'T');
+							} else {
+								hm.put(keyI, 'F');
+							}
+						}
 						break;
 					}
 					value = T[i].charAt(j);
@@ -31,8 +45,12 @@ public class Interview {
 		}
 		numberOfTasks = hm.size();
 
-		System.out.println(hm);
+		for (Map.Entry<Integer, Character> entry: hm.entrySet()) {
+			if ( entry.getValue() == 'T') numberOfSuccessfulTask++;
+		}
 
-		return 0;
+//		System.out.println(hm);
+
+		return numberOfSuccessfulTask * 100 / numberOfTasks;
 	}
 }
