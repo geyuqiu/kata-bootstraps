@@ -18,22 +18,16 @@ class InterviewTest {
 	private static Stream<Arguments>
 	test() {
 		return Stream.of(
-			Arguments.of(new String[]{"test1a", "test2", "test1b", "test1c", "test3"},
-				new String[]{"Wrong answer", "OK", "Runtime error", "OK", "Time limit exceeded"},
-				33),
-			Arguments.of(new String[]{"codility1", "codility3", "codility2", "codility4b", "codility4a"},
-				new String[]{"Wrong answer", "OK", "OK", "Time limit exceeded", "OK"},
-				50),
-			Arguments.of(new String[]{"codility1", "codility3", "codility2a", "codility4b", "codility4a", "codility2b"},
-				new String[]{"Wrong answer", "OK", "OK", "Time limit exceeded", "OK", "Time limit exceeded"},
-				25)
+			Arguments.of(new int[]{7, 3, 7, 3, 1, 3, 4, 1}, 5),
+			Arguments.of(new int[]{2, 1, 1, 3, 2, 1, 1, 3}, 3),
+			Arguments.of(new int[]{7, 5, 2, 7, 2, 7, 4, 7}, 6)
 		);
 	}
 	@ParameterizedTest
 	@MethodSource
 	void
-	test(String[] T, String[] R, int expected) {
-		int actual = interview.solution(T,R);
+	test(int[] A, int expected) {
+		int actual = interview.solution(A);
 
 		assertThat(actual).isEqualTo(expected);
 	}
