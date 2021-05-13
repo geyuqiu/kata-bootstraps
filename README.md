@@ -250,8 +250,10 @@ project planning happen on the team?"
 
 * 2<sup>10</sup> =  10<sup>3</sup> = 1KB
 * 2<sup>20</sup> =  10<sup>6</sup> = 1MB
-* 2<sup>30</sup> =  10<sup>9</sup> = 1GB
+* 2<sup>30</sup> =  10<sup>9</sup> = 1GB 
+* 2<sup>32</sup> (about Integer.MAX_VALUE)
 * 2<sup>40</sup> =  10<sup>12</sup> = 1TB
+* 2<sup>64</sup> (about Long.MAX_VALUE)
 
 ## binary bit shifting
 a: binary
