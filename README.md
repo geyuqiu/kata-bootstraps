@@ -39,7 +39,7 @@ still missing completing all interview questions ...
 | 1845 | [seat-manager][1845]                                               |              |
 | 1846 | [maximum-element-after-decrementing-and-rearranging][1846]                                               |              |
 | 1854 | [maximum-population][1854]                                               |   Hash Table           |
-| 1855 | [max-distance][1855]                                               |   Hash Table           |
+| 1855 | [max-distance][1855]                                               |   Binary Search           |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -71,7 +71,7 @@ still missing completing all interview questions ...
 [1845]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/seatManager.py
 [1846]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/maximumElementAfterDecrementingAndRearranging.py
 [1854]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaximumPopulation.java
-[1855: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxDistance.java
+[1855]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxDistance.java
 
 chapters to skip: 
 * chapter 12: 158 - 163
