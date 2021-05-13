@@ -97,9 +97,9 @@ chapters to skip:
         * Queue
             * useful for BFS traversal
             * 
-    * if brute force not possible, have there been any similar algorithms before that was solved
+    * if brute force not possible, have you solved any similar algorithms before ?
     * makes sense if misheard the concept / task
-    * state the runtime: O()
+    * state the runtime: O(?)
     * e.g. count the intersection of 2 **sorted**, **distinct** lists
         * [1,12,15,19,20,21]
         * [2,15,17,19,21,25,27]
@@ -125,7 +125,7 @@ chapters to skip:
             * throw values in B in **hashset** (preparation): look up time O(1) --> runtime overall: 
                 O(A+B) runtime, O(B) space complexity
             * binary search on B: O(log B) runtime, O(1) space complexity
-            * use sorted as not yet used criteria and walk through A and B with two pointers (linear search): similar to merging these 2 sorted arrays:
+            * **use sorted as not yet used criteria** and walk through A and B with two pointers (linear search): similar to merging these 2 sorted arrays:
                 O(A+B) runtime, O(1) space complexity
     * Space and time **trade-offs**
         * more space complexity with pre-computations
@@ -139,8 +139,8 @@ chapters to skip:
             * brute force: find all permutations (S!) * look for each in b (B)
             * optimisation:
                 * Walk through b and look at sliding windows of 4 characters (since s has length 4). Check if each window is a permutation of s
-                * Walk through b.Every time you see a character ins, check if the next four(the length ofs) characters
-                  are a permutation ofs.
+                * Walk through b. Every time you see a character in s, check if the next four(the length of s) characters
+                  are a permutation of s.
                 * O(B*S) 
         * binary search
             * search name in a dictionary without knowing the exact place of e.g. S, as a real world metaphor for binary search
@@ -184,16 +184,15 @@ note down the mistakes that are discovered by ide syntax highlighting, compiler 
         * changing arraylist of int after adding it to an arraylist of arraylist has side effect (changing reference) --> add copy of the arrayList 
         * methods: `.contains` instead of `.containsKey()`
         * interfaces: `Entry` instead of `Map.Entry<Integer, Integer>` (java being too bitching about generics typing ?)
-        * `https://mkyong.com/java/java-list-throws-unsupportedoperationexception/`
-        * `ConcurrentModificationException`: modifying element in a set when iterating through it via foreach / iterator
+        * `List.of`: https://www.geeksforgeeks.org/how-to-solve-java-list-unsupportedoperationexception/
+        * `ConcurrentModificationException`: modifying element in a set when iterating through it via foreach / iterator, you a simple for loop with incrementer instead !
         * typo: `,` instead of `;`, `Hashset` instead of `HashSet`, `.size` instead of `.size()`, missing `=` in `+=`
-        * so tedious to get first element in hashset p?:  return p.stream().findFirst().get();
-    * not making code modular 
+        * so tedious to get first element in hashset p?:  `return p.stream().findFirst().get();`
+    * not making code modular/reusable 
 * techniques
     * write `initIncrementalMatrix(int size)` and fill in the details later
     * use 2-dim array for start and end points or a sophisticated class (better than using StartEndPair)
     * use descriptive method/variable names, but abbreviate it after 1. usage with explanation, and mentions place that should be refactored
-    *  
 ## interview preparation grid
 
 * answer questions by mentioning: `I` instead of `We`
