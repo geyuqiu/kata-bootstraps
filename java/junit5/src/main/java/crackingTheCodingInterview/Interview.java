@@ -1,12 +1,10 @@
 package crackingTheCodingInterview;
 
-import java.util.Arrays;
-
 /**
  *
  */
 public class Interview {
-	int solution(int[] A) { // binary search: O(logn * n)
+	int solution(int[] A) { // O(n * n)
 		int i;
 		int j;
 		boolean leftBoundarySet = false;
@@ -14,13 +12,13 @@ public class Interview {
 
 		for (i = 0, j = A.length-1; i < A.length && j>i;) {
 			if (leftBoundarySet && rightBoundarySet) break;
-			int li = Arrays.binarySearch(A, i, j+1, A[i]);
+			int li = getIndex(A, i+1, j, A[i]);
 			if (li >= 0) {
 				i++;
 			} else {
 				leftBoundarySet = true;
 			}
-			int ri = Arrays.binarySearch(A, i, j+1, A[j]);
+			int ri = getIndex(A, i, j-1, A[j]);
 			if (ri >= 0) {
 				j--;
 			} else {
@@ -31,5 +29,10 @@ public class Interview {
 		return j-i + 1;
 	}
 
-
+	private int getIndex(int[] a, int i, int j, int key) {
+		for (int k = i; k <=j ; k++) {
+			if (key == a[k]) return k;
+		}
+		return -1;
+	}
 }
