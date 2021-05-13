@@ -1,32 +1,38 @@
 package crackingTheCodingInterview;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 /**
  *
  */
-public class Interview { // time: O(), space: O()
-	boolean isHappy(int num) {
-		HashSet<Long> hs = new HashSet<>();
-		long product;
-		long n = num;
+public class Interview {
+	int solution(String[] T, String[] R) {
+		int N = T.length;
+		int numberOfTasks;
+		HashMap<Integer, Character> hm = new HashMap<>();
 
-		while (true) {
-			product = 0;
-			long temp = n;
-			long rest = n;
-
-			while (rest != 0 || temp != 0) {
-				rest = (long) temp % 10;
-				temp = (long) temp / 10;
-				product += (long) rest * rest;
+		for (int i = 0; i < T.length; i++) {
+			char value = '\0';
+			String key = "";
+			boolean taskNumberDiscovered = false;
+			for (int j = T[i].length() - 1; j > 0 ; j--) {
+				if (Character.isDigit(T[i].charAt(j))) {
+					key += T[i].charAt(j) + key;
+					taskNumberDiscovered = true;
+				} else {
+					if (taskNumberDiscovered) {
+						hm.put(Integer.parseInt(key), value);
+						break;
+					}
+					value = T[i].charAt(j);
+				}
 			}
-			boolean added = hs.add(product);
-			if (!added) break;
-
-			n = product;
 		}
-		if (product == 1) return true;
-		return false;
+		numberOfTasks = hm.size();
+
+		System.out.println(hm);
+
+		return 0;
 	}
 }
