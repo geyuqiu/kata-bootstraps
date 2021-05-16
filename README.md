@@ -40,6 +40,7 @@ still missing completing all interview questions ...
 | 1846 | [maximum-element-after-decrementing-and-rearranging][1846]                                               |              |
 | 1854 | [maximum-population][1854]                                               |   Hash Table           |
 | 1855 | [max-distance][1855]                                               |   Binary Search           |
+| 1859 | [max-distance][1859]                                               |   Hash Table           |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -72,6 +73,7 @@ still missing completing all interview questions ...
 [1846]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/maximumElementAfterDecrementingAndRearranging.py
 [1854]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaximumPopulation.java
 [1855]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxDistance.java
+[1859]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/sortSentence.py
 
 chapters to skip: 
 * chapter 12: 158 - 163
@@ -186,7 +188,7 @@ note down the mistakes that are discovered by ide syntax highlighting, compiler 
         * interfaces: `Entry` instead of `Map.Entry<Integer, Integer>` (java being too bitching about generics typing ?)
         * `List.of`: https://www.geeksforgeeks.org/how-to-solve-java-list-unsupportedoperationexception/
         * `ConcurrentModificationException`: modifying element in a set when iterating through it via foreach / iterator, you a simple for loop with incrementer instead !
-        * typo: `,` instead of `;`, `Hashset` instead of `HashSet`, `.size` instead of `.size()`, missing `=` in `+=`
+        * typo: `,` instead of `;`, `Hashset` instead of `HashSet`, `.size` instead of `.size()`, missing `=` in `+=`, missing `:` at the end a `for` loop in python
         * so tedious to get first element in hashset p?:  `return p.stream().findFirst().get();`
     * not making code modular/reusable 
 * techniques
