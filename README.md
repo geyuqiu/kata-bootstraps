@@ -40,7 +40,8 @@ still missing completing all interview questions ...
 | 1846 | [maximum-element-after-decrementing-and-rearranging][1846]                                               |              |
 | 1854 | [maximum-population][1854]                                               |   Hash Table           |
 | 1855 | [max-distance][1855]                                               |   Binary Search           |
-| 1859 | [max-distance][1859]                                               |   Hash Table           |
+| 1859 | [sort-sentence][1859]                                               |   Hash Table           |
+| 1860 | [mem-leak][1860]                                               |   Hash Table           |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -74,6 +75,7 @@ still missing completing all interview questions ...
 [1854]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaximumPopulation.java
 [1855]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxDistance.java
 [1859]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/sortSentence.py
+[1860]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/memLeak.py
 
 chapters to skip: 
 * chapter 12: 158 - 163
