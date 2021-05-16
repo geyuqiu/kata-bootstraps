@@ -42,6 +42,7 @@ still missing completing all interview questions ...
 | 1855 | [max-distance][1855]                                               |   Binary Search           |
 | 1859 | [sort-sentence][1859]                                               |   Hash Table           |
 | 1860 | [mem-leak][1860]                                               |   Hash Table           |
+| 1861 | [rotate-the-box][1861]                                               |   Hash Table           |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -76,6 +77,7 @@ still missing completing all interview questions ...
 [1855]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxDistance.java
 [1859]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/sortSentence.py
 [1860]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/memLeak.py
+[1861]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/RotateTheBox.java
 
 chapters to skip: 
 * chapter 12: 158 - 163
