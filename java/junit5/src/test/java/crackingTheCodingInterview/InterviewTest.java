@@ -18,14 +18,16 @@ class InterviewTest {
 	private static Stream<Arguments>
 	test() {
 		return Stream.of(
-			Arguments.of(19, true)
+			Arguments.of(new int[]{2,1,3}, 2, 3),
+			Arguments.of(new int[]{0,4,3,-1}, 2, 2),
+			Arguments.of(new int[]{2,1,4}, 3, 0)
 		);
 	}
 	@ParameterizedTest
 	@MethodSource
 	void
-	test(int num, boolean expected) {
-		boolean actual = interview.isHappy(num);
+	test(int[] A, int S, int expected) {
+		int actual = interview.solution(A, S);
 
 		assertThat(actual).isEqualTo(expected);
 	}

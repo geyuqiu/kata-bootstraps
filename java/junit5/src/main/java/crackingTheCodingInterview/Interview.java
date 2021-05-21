@@ -1,32 +1,27 @@
 package crackingTheCodingInterview;
 
-import java.util.HashSet;
-
 /**
  *
  */
-public class Interview { // time: O(), space: O()
-	boolean isHappy(int num) {
-		HashSet<Long> hs = new HashSet<>();
-		long product;
-		long n = num;
+public class Interview {
+	int solution(int[] A, int S) { // O(n ^ 3)
+		int sumOfContiguousFragments = 0;
 
-		while (true) {
-			product = 0;
-			long temp = n;
-			long rest = n;
-
-			while (rest != 0 || temp != 0) {
-				rest = (long) temp % 10;
-				temp = (long) temp / 10;
-				product += (long) rest * rest;
+		for (int i = 0; i < A.length; i++) {
+			// j-i is the number of elements which should be in the fragment
+			for (int j = i; j < A.length; j++) {
+				int sumOfFragments = 0;
+				int counter = j-i+1;
+				for (int k = i; k <= j; k++) {
+//					System.out.print(A[k]);
+					sumOfFragments += A[k];
+				}
+				double mean = (double) sumOfFragments / counter;
+				if (mean == Double.valueOf(S)) sumOfContiguousFragments++;
+//				System.out.println();
 			}
-			boolean added = hs.add(product);
-			if (!added) break;
-
-			n = product;
 		}
-		if (product == 1) return true;
-		return false;
+
+		return sumOfContiguousFragments;
 	}
 }
