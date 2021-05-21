@@ -4,7 +4,7 @@ Following is my notes and source code when reading crackingTheCodingInterviewBoo
 and practicing mostly on platforms like Leetcode.
 
 ## current progress: 
-p. 151 / 36
+p. 163 / 36
 
 still missing completing all interview questions ...
 
