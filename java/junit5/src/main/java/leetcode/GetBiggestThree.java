@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * @author YUQIU
  */
-public class GetBiggestThree { // O(m*n)
+public class GetBiggestThree { // time: O(m*n), space: O(3)
 	List<Integer> r = new ArrayList<>();
 
 	int[] getBiggestThree(int[][] grid) {
@@ -20,8 +20,8 @@ public class GetBiggestThree { // O(m*n)
 				diameters[index] = i;
 			}
 			for (int i = 0; i < 49; i++) {
-				int d = diameters[i];
-				if (d <= m && d <= n) findDiameter(grid, m, n, d);
+				int diameter = diameters[i];
+				if (diameter <= m && diameter <= n) findDiameter(grid, m, n, diameter);
 			}
 		}
 
@@ -46,7 +46,6 @@ public class GetBiggestThree { // O(m*n)
 			if (index == 3) break;
 		}
 
-		System.out.println(hm);
 		return res;
 	}
 
@@ -58,27 +57,27 @@ public class GetBiggestThree { // O(m*n)
 		}
 	}
 
-	private void findDiameter(int[][] grid, int m, int n, int diameter) { // each of the corners centered in a grid cell, 7 = 7/2 + 1 + 7/2
+	private void findDiameter(int[][] grid, int m, int n, int d) { // each of the corners centered in a grid cell, 7 = d/2 + 1 + d/2
 
-		for (int i = diameter / 2; i <= m - 1 - diameter / 2; i++) { // grid[i][j] as the center of Rhombus
-			for (int j = diameter / 2; j <= n - 1 - diameter / 2; j++) {
+		for (int i = d / 2; i <= m - 1 - d / 2; i++) { // grid[i][j] as the center of Rhombus
+			for (int j = d / 2; j <= n - 1 - d / 2; j++) {
 				int sum = 0;
 
 				// similar to css margin: 1px 2px 3px 4px
-				int topX = i - diameter / 2;
+				int topX = i - d / 2;
 				int topY = j;
 				int top = grid[topX][topY];
 
 				int rightX = i;
-				int rightY = j + diameter / 2;
+				int rightY = j + d / 2;
 				int right = grid[rightX][rightY];
 
-				int bottomX = i + diameter / 2;
+				int bottomX = i + d / 2;
 				int bottomY = j;
 				int bottom = grid[bottomX][bottomY];
 
 				int leftX = i;
-				int leftY = j - diameter / 2;
+				int leftY = j - d / 2;
 				int left = grid[leftX][leftY];
 
 				sum += bottom + top + right + left;
