@@ -12,14 +12,12 @@ public class GetBiggestThree { // O(m*n)
 		int n = grid[0].length;
 		findDiameter1x1(grid, m, n);
 
-		int[] diameters = new int[50]; // m, n <= 100
 		int index = 0;
-		for (int i = 1; i < 50; i++) {
-			if (i % 2 == 1) {
+		if ( m >= 3 && n >= 3) {
+			int[] diameters = new int[50]; // m, n <= 100
+			for (int i = 1; i < 100; i+=2, index++) {
 				diameters[index] = i;
 			}
-		}
-		if ( m >= 3 && n >= 3) {
 			for (int i = 0; i < 50; i++) {
 				int d = diameters[i];
 				if (d <= m && d <= n) findDiameter(grid, m, n, d);
