@@ -7,11 +7,24 @@ import java.util.*;
  */
 public class GetBiggestThree { // O(m*n)
 	List<Integer> r = new ArrayList<>();
-	int[] getBiggestThree(int[][] grid) {
+	int[] getBiggestThree(int[][] grid) { // each of the corners centered in a grid cell
 		int m = grid.length;
 		int n = grid[0].length;
-		findSimple(grid, m, n);
-		if ( m >= 3 && n>= 3) findRombus(grid, m, n);
+		findDiameter1x1(grid, m, n);
+
+		int[] diameters = new int[50]; // m, n <= 100
+		int index = 0;
+		for (int i = 1; i < 50; i++) {
+			if (i % 2 == 1) {
+				diameters[index] = i;
+			}
+		}
+		if ( m >= 3 && n >= 3) {
+			for (int i = 0; i < 50; i++) {
+				int d = diameters[i];
+				if (d <= m && d <= n) findDiameter(grid, m, n, d);
+			}
+		}
 
 		Collections.sort(r, Collections.reverseOrder());
 		LinkedHashMap<Integer, Boolean> hm = new LinkedHashMap<>();
@@ -25,7 +38,7 @@ public class GetBiggestThree { // O(m*n)
 		if (hm.size() < 3)  len = hm.size();
 		else len = 3;
 		int[] res = new int[len];
-		int index = 0;
+		index = 0;
 
 		for (Map.Entry<Integer, Boolean> entry: hm.entrySet()) {
 			res[index] = entry.getKey();
@@ -35,7 +48,7 @@ public class GetBiggestThree { // O(m*n)
 		return res;
 	}
 
-	private void findSimple(int[][] grid, int m, int n) {
+	private void findDiameter1x1(int[][] grid, int m, int n) {
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
 				r.add(grid[i][j]);
@@ -43,10 +56,10 @@ public class GetBiggestThree { // O(m*n)
 		}
 	}
 
-	private void findRombus(int[][] grid, int m, int n) {
-		int mHalf = m/2;
-		int nHalf = n/2;
-		int sum = grid[0][nHalf] + grid[m-1][nHalf] + grid[mHalf][0] + grid[mHalf][n-1];
+	private void findDiameter(int[][] grid, int i, int m, int diameter) {
+		int sum = 0;
+
+
 
 		r.add(sum);
 	}
