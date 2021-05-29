@@ -12,7 +12,7 @@ public class GetBiggestThree { // O(m*n)
 		int n = grid[0].length;
 		findRombus(grid, m, n);
 
-		Collections.sort(r);
+		Collections.sort(r, Collections.reverseOrder());
 		LinkedHashMap<Integer, Boolean> hm = new LinkedHashMap<>();
 		for (int i: r) {
 			if (!hm.containsKey(i)) {
@@ -20,12 +20,16 @@ public class GetBiggestThree { // O(m*n)
 			}
 		}
 
-		int[] res = new int[hm.size()];
+		int len;
+		if (hm.size() < 3)  len = hm.size();
+		else len = 3;
+		int[] res = new int[len];
 		int index = 0;
 
 		for (Map.Entry<Integer, Boolean> entry: hm.entrySet()) {
 			res[index] = entry.getKey();
 			index++;
+			if (index == 3) break;
 		}
 		return res;
 	}
