@@ -43,6 +43,9 @@ still missing completing all interview questions ...
 | 1859 | [sort-sentence][1859]                                               |   Hash Table           |
 | 1860 | [mem-leak][1860]                                               |   Hash Table           |
 | 1861 | [rotate-the-box][1861]                                               |   Hash Table           |
+| 1876 | [count-good-substrings][1876]                                               |   Hash Table           |
+| 1877 | [min-pair-sum][1877]                                               |        |
+| 1878 | [get-biggest-three][1878]                                               | Math       |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -78,6 +81,9 @@ still missing completing all interview questions ...
 [1859]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/sortSentence.py
 [1860]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/memLeak.py
 [1861]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/RotateTheBox.java
+[1876]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountGoodSubstrings.java
+[1877]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MinPairSum.java
+[1878]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/GetBiggestThree.java
 
 chapters to skip: 
 * chapter 12: 158 - 163
