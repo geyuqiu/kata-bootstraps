@@ -60,34 +60,36 @@ public class GetBiggestThree { // O(m*n)
 
 	private void findDiameter(int[][] grid, int m, int n, int diameter) { // each of the corners centered in a grid cell, 7 = 7/2 + 1 + 7/2
 
-		for (int i = m / 2; i <= m - 1 - m / 2; i++) { // grid[i][j] as the center of Rhombus
-			for (int j = n / 2; j <= n - 1 - n / 2; j++) {
+		for (int i = diameter / 2; i <= m - 1 - diameter / 2; i++) { // grid[i][j] as the center of Rhombus
+			for (int j = diameter / 2; j <= n - 1 - diameter / 2; j++) {
 				int sum = 0;
 
 				// similar to css margin: 1px 2px 3px 4px
-				int topX = i - m / 2;
+				int topX = i - diameter / 2;
 				int topY = j;
 				int top = grid[topX][topY];
 
 				int rightX = i;
-				int rightY = j + n / 2;
+				int rightY = j + diameter / 2;
 				int right = grid[rightX][rightY];
 
-				int bottomX = i + m / 2;
+				int bottomX = i + diameter / 2;
 				int bottomY = j;
 				int bottom = grid[bottomX][bottomY];
 
 				int leftX = i;
-				int leftY = j - n / 2;
+				int leftY = j - diameter / 2;
 				int left = grid[leftX][leftY];
 
 				sum += bottom + top + right + left;
 
 				sum += findBetween(grid, topX, topY, rightX, rightY, 1, 1);
+				sum += findBetween(grid, rightX, rightY, bottomX, bottomY, 1, -1);
+				sum += findBetween(grid, bottomX, bottomY, leftX, leftY, -1, -1);
+				sum += findBetween(grid, leftX, leftY, topX, topY,-1, 1);
 				r.add(sum);
 			}
 		}
-
 	}
 
 	private int findBetween(int[][] grid, int startX, int startY, int stopX, int stopY, int incrementX, int incrementY) {
