@@ -6,13 +6,13 @@ package leetcode;
 public class ChalkReplacer {
 	int chalkReplacer(int[] chalk, int k) { // TLE
 		int i=0;
-		int sum = 0;
+		long sum = 0;
 		int N = chalk.length;
 		for (int j = 0; j < N; j++) {
 			sum += chalk[j];
 		}
 
-		k = k % sum;
+		k = (int) (k % sum);
 
 		while (k>0) {
 			if (k < chalk[i]) return i;
