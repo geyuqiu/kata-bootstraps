@@ -32,6 +32,9 @@ still missing completing all interview questions ...
 | 1670 | [front-middle-back-queue][1670]                                   |                                            |
 | 1684 | [count-consistent-strings][1684]                                    | Hash Table                                 |
 | 1763 | [longest-nice-substring][1763]                                    | Hash Table                                 |
+| 1779 | [nearest-valid-point][1779]                                    |                               |
+| 1780 | [check-powers-of-three][1780]                                    |                               |
+| 1797 | [authentication-manager][1797]                                    | Hash Table                                 |
 | 1800 | [max-ascending-sum][1800]                                         |                                            |
 | 1805 | [num-different-integers][1805]                                         |                                            |
 | 1812 | [square-is-white][1812]                                           |                                            |
@@ -93,6 +96,9 @@ still missing completing all interview questions ...
 [1670]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FrontMiddleBackQueue.java
 [1684]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountConsistentStrings.java
 [1763]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/LongestNiceSubstring.java
+[1779]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/NearestValidPoint.java
+[1780]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CheckPowersOfThree.java
+[1797]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/AuthenticationManager.java
 [1800]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxAscendingSum.java
 [1805]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/NumDifferentIntegers.java
 [1812]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/SquareIsWhite.java
