@@ -46,6 +46,7 @@ still missing completing all interview questions ...
 | 1876 | [count-good-substrings][1876]                                               |   Hash Table           |
 | 1877 | [min-pair-sum][1877]                                               |        |
 | 1878 | [get-biggest-three][1878]                                               | Math       |
+| 5846 | [find-middle-index][5846]                                               | Math       |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -84,6 +85,7 @@ still missing completing all interview questions ...
 [1876]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountGoodSubstrings.java
 [1877]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MinPairSum.java
 [1878]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/GetBiggestThree.java
+[5846]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FindMiddleIndex.java
 
 chapters to skip: 
 * chapter 12: 158 - 163
