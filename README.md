@@ -27,6 +27,9 @@ still missing completing all interview questions ...
 |  47 | [permute-unique][47]                                               |                                      |
 |  78  | [subsets][78]                                               | Hash Table                                        |
 |  47  | [permute-unique][47]                                               | backtracking                                        |
+|  167 | [two-sum-two][167]                                         |                                  |
+|  169 | [majority-element][169]                                         |                                  |
+|  171 | [title-to-number][171]                                         |                                  |
 |  200 | [num-islands][200]                                         | dfs                                 |
 |  202 | [is-happy][202]                                         |                                  |
 |  239 | [max-sliding-window][239]                                         | LinkedList                                 |
@@ -96,6 +99,9 @@ still missing completing all interview questions ...
 [35]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/SearchInsert.java
 [47]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/PermuteUnique.java
 [78]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Subsets.java
+[167]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/TwoSumTwo.java
+[169]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MajorityElement.java
+[171]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/TitleToNumber.java
 [200]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/NumIslands.java
 [202]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/IsHappy.java
 [239]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java
