@@ -4,37 +4,69 @@ package leetcode;
  * @author YUQIU
  */
 public class CountDifferentSubsequenceGCDs { // https://leetcode.com/problems/number-of-different-subsequences-gcds/
-	// 1 <= nums.length <= 10^5
-	// 1 <= nums[i] <= 2 * 10^5
-	int countDifferentSubsequenceGCDs(int[] nums) { // time: O( M * log(M) * log(M)), space : O(M), M: max of nums[i]
+	int countDifferentSubsequenceGCDs(int[] nums) {
+		//find the maximum number
+		int maxNum = findMaxNum(nums);
 
-		int max = 0;
-		for (int n: nums) max = Math.max(n, max);
+		//maximum gcd can be the maximum number in input array
+		//no need to check any another number
+		int len = maxNum + 1;
 
-		int len = max + 1;
-		boolean[] exists = new boolean[len];
-		for (int n : nums) exists[n] = true;
+		//mark as this number is exist
+		//it helps, to check this number exist or not
+		boolean[] numExist = new boolean[len];
+		for(int num : nums){
+			numExist[num] = true;
+		}
 
 		int gcdCount = 0;
-		for (int i = 1; i < len; i++)
-			if (subsequenceFound(exists, i))
-				gcdCount++;
+
+		for(int gcd = 1; gcd <= maxNum; gcd++){
+
+			boolean found = searchGcd(numExist, gcd);
+
+			if(found) gcdCount++;
+
+		}
+
 
 		return gcdCount;
 	}
 
-	boolean subsequenceFound(boolean[] exists, int factor) {
-		int calculatedGcd = 0; //gcd(0, X) -> X
+	private boolean searchGcd(boolean[] numExist, int gcd){
+		//calculate the gcd
+		// default caluated gcd
+		// as we gcd(0, X) -> X
+		int calculatedGcd = 0;
 
-		for (int i = factor; i < exists.length; i += factor) {
-			if (exists[i]) calculatedGcd = gcd(calculatedGcd, i); // gcd(2*3,2*5) = 2
-			if (calculatedGcd == factor) return true; // gcd(4,16) = 4 != 2
+		//iterate every multile of current gcd
+		for(int num = gcd; num < numExist.length; num += gcd){
+			if(numExist[num]){
+				//number exist in the input array
+				//now calculate the gcd, with previous caluated gcd with current number
+				calculatedGcd = getGcd(calculatedGcd, num);
+			}
+
+			//as calculated gcd is equal to gcd, we actually looking
+			if(calculatedGcd == gcd) return true;
+
 		}
+
+
 		return false;
 	}
 
-	int gcd(int a, int b) { // O(log(a+b))
-		if (a % b == 0) return b;
-		else return gcd(b, a % b);
+	private int findMaxNum(int[] nums){
+		int maxNum = 0;
+		for(int num : nums) maxNum = Math.max(maxNum, num);
+
+		return maxNum;
+	}
+
+
+	private int getGcd(int a, int b){
+		if(b == 0) return a;
+
+		return getGcd(b, a % b);
 	}
 }

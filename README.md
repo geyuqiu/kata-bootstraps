@@ -32,14 +32,16 @@ still missing completing all interview questions ...
 | 1670 | [front-middle-back-queue][1670]                                   |                                            |
 | 1684 | [count-consistent-strings][1684]                                    | Hash Table                                 |
 | 1763 | [longest-nice-substring][1763]                                    | Hash Table                                 |
-| 1812 | [square-is-white][1812]                                           |                                            |
 | 1800 | [max-ascending-sum][1800]                                         |                                            |
+| 1805 | [num-different-integers][1805]                                         |                                            |
+| 1812 | [square-is-white][1812]                                           |                                            |
 | 1813 | [are-sentences-similar][1813]                                     | LinkedList                                 |
 | 1814 | [count-nice-pairs-in-an-array][1814]                              | Hash Table                                 |
 | 1815 | [max-happy-groups][1815]                                          | dfs, dp                                    |
 | 1816 | [truncate-sentence][1816]                                         |                                            |
 | 1817 | [finding-users-active-minutes][1817]                              | Hash Table                                 |
 | 1818 | [min-absolute-sum-diff][1818]                                     |                                            |
+| 1819 | [count-different-subsequence-gcds][1819]                                     |                                            |
 | 1822 | [array-sign][1822]                                                |                                            |
 | 1823 | [find-the-winner][1823]                                           |                                            |
 | 1824 | [min-side-jumps][1824]                                            |                                            |
@@ -58,9 +60,11 @@ still missing completing all interview questions ...
 | 1859 | [sort-sentence][1859]                                               |   Hash Table           |
 | 1860 | [mem-leak][1860]                                               |   Hash Table           |
 | 1861 | [rotate-the-box][1861]                                               |   Hash Table           |
+| 1863 | [subset-xor-sum][1863]                                               |              |
 | 1876 | [count-good-substrings][1876]                                               |   Hash Table           |
 | 1877 | [min-pair-sum][1877]                                               |        |
 | 1878 | [get-biggest-three][1878]                                               | Math       |
+| 1893 | [is-covered][1893]                                               |        |
 | 1894 | [chalk-replacer][1894]                                               |        |
 | 1909 | [can-be-increasing][1909]                                               |        |
 | 1910 | [remove-occurrences][1910]                                               |        |
@@ -90,6 +94,7 @@ still missing completing all interview questions ...
 [1684]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountConsistentStrings.java
 [1763]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/LongestNiceSubstring.java
 [1800]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxAscendingSum.java
+[1805]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/NumDifferentIntegers.java
 [1812]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/SquareIsWhite.java
 [1813]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/AreSentencesSimilar.java
 [1814]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountNicePairs.java
@@ -97,6 +102,7 @@ still missing completing all interview questions ...
 [1816]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/TruncateSentence.java
 [1817]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FindingUsersActiveMinutes.java
 [1818]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MinAbsoluteSumDiff.java
+[1819]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountDifferentSubsequenceGCDs.java
 [1822]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/ArraySign.java
 [1823]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FindTheWinner.java
 [1824]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MinSideJumps.java
@@ -115,9 +121,11 @@ still missing completing all interview questions ...
 [1859]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/sortSentence.py
 [1860]: https://github.com/geyuqiu/kata-bootstraps/blob/master/python/unittest/memLeak.py
 [1861]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/RotateTheBox.java
+[1863]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/SubsetXORSum.java
 [1876]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountGoodSubstrings.java
 [1877]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MinPairSum.java
 [1878]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/GetBiggestThree.java
+[1893]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/IsCovered.java
 [1894]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/ChalkReplacer.java
 [1909]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CanBeIncreasing.java
 [1910]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/RemoveOccurrences.java
