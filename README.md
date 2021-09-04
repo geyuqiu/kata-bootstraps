@@ -27,8 +27,11 @@ still missing completing all interview questions ...
 |  47 | [permute-unique][47]                                               |                                      |
 |  78  | [subsets][78]                                               | Hash Table                                        |
 |  47  | [permute-unique][47]                                               | backtracking                                        |
+|  200 | [num-islands][200]                                         | dfs                                 |
+|  202 | [is-happy][202]                                         |                                  |
 |  239 | [max-sliding-window][239]                                         | LinkedList                                 |
 |  509 | [fib][509]                                         | Dynamic Programming                                 |
+|  543 | [diameter-of-binary-tree][543]                                         |                              |
 | 1669 | [merge-in-between][1669]                                   |                                            |
 | 1670 | [front-middle-back-queue][1670]                                   |                                            |
 | 1672 | [maximum-wealth][1672]                                   |                                            |
@@ -93,8 +96,11 @@ still missing completing all interview questions ...
 [35]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/SearchInsert.java
 [47]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/PermuteUnique.java
 [78]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Subsets.java
+[200]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/NumIslands.java
+[202]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/IsHappy.java
 [239]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java
 [509]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Fib.java
+[543]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/DiameterOfBinaryTree.java
 [1669]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MergeInBetween.java
 [1670]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FrontMiddleBackQueue.java
 [1672]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaximumWealth.java
