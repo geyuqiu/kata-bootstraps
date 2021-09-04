@@ -11,12 +11,18 @@ still missing completing all interview questions ...
 ## solutions to problems
 | #    | Title                                                             | Data Structures etc.                       |
 | :--- | :---------------------------------------------------------------- | :------------------------------------------|
-|  78  | [subsets][78]                                               | backtracking                                        |
+|  1  | [two-sum][1]                                               | Hash Table                                        |
+|  2  | [add-two-numbers][2]                                               | Hash Table                                        |
+|  7  | [reverse][7]                                               | String                                     |
+|  9  | [is-palindrome][9]                                               | String                                     |
+|  12  | [int-to-roman][12]                                               |                                      |
+|  78  | [subsets][78]                                               | Hash Table                                        |
 |  47  | [permute-unique][47]                                               | backtracking                                        |
 |  239 | [max-sliding-window][239]                                         | LinkedList                                 |
 |  509 | [fib][509]                                         | Dynamic Programming                                 |
 | 1670 | [front-middle-back-queue][1670]                                   |                                            |
-| 1684 | [CountConsistentStrings][1684]                                    | Hash Table                                 |
+| 1684 | [count-consistent-strings][1684]                                    | Hash Table                                 |
+| 1763 | [longest-nice-substring][1763]                                    | Hash Table                                 |
 | 1812 | [square-is-white][1812]                                           |                                            |
 | 1800 | [max-ascending-sum][1800]                                         |                                            |
 | 1813 | [are-sentences-similar][1813]                                     | LinkedList                                 |
@@ -50,12 +56,18 @@ still missing completing all interview questions ...
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
+[1]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/TwoSum.java
+[2]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/AddTwoNumbers.java
+[7]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Reverse.java
+[9]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/IsPalindrome.java
+[12]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/IntToRoman.java
 [47]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/PermuteUnique.java
 [78]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Subsets.java
 [239]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java
 [509]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Fib.java
 [1670]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FrontMiddleBackQueue.java
 [1684]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountConsistentStrings.java
+[1763]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/LongestNiceSubstring.java
 [1800]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxAscendingSum.java
 [1812]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/SquareIsWhite.java
 [1813]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/AreSentencesSimilar.java
