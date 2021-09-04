@@ -21,6 +21,10 @@ still missing completing all interview questions ...
 |  20 | [is-valid][20]                                               |                                      |
 |  21 | [merge-two-lists][21]                                               |                                      |
 |  26 | [remove-duplicates][26]                                               |                                      |
+|  28 | [str-str][28]                                               |                                      |
+|  33 | [search][33]                                               |                                      |
+|  35 | [search-insert][35]                                               |                                      |
+|  47 | [permute-unique][47]                                               |                                      |
 |  78  | [subsets][78]                                               | Hash Table                                        |
 |  47  | [permute-unique][47]                                               | backtracking                                        |
 |  239 | [max-sliding-window][239]                                         | LinkedList                                 |
@@ -71,6 +75,9 @@ still missing completing all interview questions ...
 [20]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/IsValid.java
 [21]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MergeTwoLists.java
 [26]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/RemoveDuplicates.java
+[28]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/StrStr.java
+[33]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Search.java
+[35]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/SearchInsert.java
 [47]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/PermuteUnique.java
 [78]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Subsets.java
 [239]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java
