@@ -29,7 +29,9 @@ still missing completing all interview questions ...
 |  47  | [permute-unique][47]                                               | backtracking                                        |
 |  239 | [max-sliding-window][239]                                         | LinkedList                                 |
 |  509 | [fib][509]                                         | Dynamic Programming                                 |
+| 1669 | [merge-in-between][1669]                                   |                                            |
 | 1670 | [front-middle-back-queue][1670]                                   |                                            |
+| 1672 | [maximum-wealth][1672]                                   |                                            |
 | 1684 | [count-consistent-strings][1684]                                    | Hash Table                                 |
 | 1763 | [longest-nice-substring][1763]                                    | Hash Table                                 |
 | 1779 | [nearest-valid-point][1779]                                    |                               |
@@ -93,7 +95,9 @@ still missing completing all interview questions ...
 [78]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Subsets.java
 [239]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java
 [509]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Fib.java
+[1669]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MergeInBetween.java
 [1670]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FrontMiddleBackQueue.java
+[1672]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaximumWealth.java
 [1684]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountConsistentStrings.java
 [1763]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/LongestNiceSubstring.java
 [1779]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/NearestValidPoint.java
