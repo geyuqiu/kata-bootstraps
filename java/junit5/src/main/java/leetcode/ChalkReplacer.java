@@ -4,7 +4,7 @@ package leetcode;
  * @author YUQIU
  */
 public class ChalkReplacer {
-	int chalkReplacer(int[] chalk, int k) { // TLE
+	int chalkReplacer(int[] chalk, int k) {
 		int i=0;
 		long sum = 0;
 		int N = chalk.length;

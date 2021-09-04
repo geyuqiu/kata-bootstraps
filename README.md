@@ -61,7 +61,11 @@ still missing completing all interview questions ...
 | 1876 | [count-good-substrings][1876]                                               |   Hash Table           |
 | 1877 | [min-pair-sum][1877]                                               |        |
 | 1878 | [get-biggest-three][1878]                                               | Math       |
-| 5846 | [find-middle-index][5846]                                               | Math       |
+| 1894 | [chalk-replacer][1894]                                               |        |
+| 1909 | [can-be-increasing][1909]                                               |        |
+| 1910 | [remove-occurrences][1910]                                               |        |
+| 1991 | [find-middle-index][1991]                                               | Math       |
+| 1941 | [are-occurrences-equal][1941]                                               | Hash Table       |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -114,7 +118,11 @@ still missing completing all interview questions ...
 [1876]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountGoodSubstrings.java
 [1877]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MinPairSum.java
 [1878]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/GetBiggestThree.java
-[5846]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FindMiddleIndex.java
+[1894]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/ChalkReplacer.java
+[1909]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CanBeIncreasing.java
+[1910]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/RemoveOccurrences.java
+[1991]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FindMiddleIndex.java
+[1941]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/AreOccurrencesEqual.java
 
 chapters to skip: 
 * chapter 12: 158 - 163
