@@ -16,6 +16,11 @@ still missing completing all interview questions ...
 |  7  | [reverse][7]                                               | String                                     |
 |  9  | [is-palindrome][9]                                               | String                                     |
 |  12  | [int-to-roman][12]                                               |                                      |
+|  13 | [roman-to-int][13]                                               |                                      |
+|  14 | [longest-common-prefix][14]                                               |                                      |
+|  20 | [is-valid][20]                                               |                                      |
+|  21 | [merge-two-lists][21]                                               |                                      |
+|  26 | [remove-duplicates][26]                                               |                                      |
 |  78  | [subsets][78]                                               | Hash Table                                        |
 |  47  | [permute-unique][47]                                               | backtracking                                        |
 |  239 | [max-sliding-window][239]                                         | LinkedList                                 |
@@ -61,6 +66,11 @@ still missing completing all interview questions ...
 [7]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Reverse.java
 [9]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/IsPalindrome.java
 [12]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/IntToRoman.java
+[13]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/RomanToInt.java
+[14]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/LongestCommonPrefix.java
+[20]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/IsValid.java
+[21]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MergeTwoLists.java
+[26]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/RemoveDuplicates.java
 [47]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/PermuteUnique.java
 [78]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/Subsets.java
 [239]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/MaxSlidingWindow.java
