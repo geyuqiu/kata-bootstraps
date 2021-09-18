@@ -81,6 +81,7 @@ still missing completing all interview questions ...
 | 1910 | [remove-occurrences][1910]                                               |        |
 | 1991 | [find-middle-index][1991]                                               | Math       |
 | 1941 | [are-occurrences-equal][1941]                                               | Hash Table       |
+| 2002 | [count-k-difference][2002]                                               |    |
 |      | [list-of-string-permutations][listOfStringPermutations]           | dfs                                        |
 
 [listOfStringPermutations]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/crackingTheCodingInterview/listOfStringPermutations.java
@@ -153,6 +154,7 @@ still missing completing all interview questions ...
 [1910]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/RemoveOccurrences.java
 [1991]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/FindMiddleIndex.java
 [1941]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/AreOccurrencesEqual.java
+[2002]: https://github.com/geyuqiu/kata-bootstraps/blob/master/java/junit5/src/main/java/leetcode/CountKDifference.java
 
 chapters to skip: 
 * chapter 12: 158 - 163
