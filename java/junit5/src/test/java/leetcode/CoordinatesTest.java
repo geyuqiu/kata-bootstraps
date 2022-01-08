@@ -13,12 +13,6 @@ class CoordinatesTest {
     coordinates = new Coordinates();
   }
 
-//  @Test
-//  void calcDistances() {
-//    int[][] coord = new int[][] {{1,4},{4,4},{3,2},{5,1}};
-//    assertEquals(, coordinates.calcDistances(coord));
-//  }
-
   @Test
   void getMax() {
     int[][] coord = new int[][] {{1,4},{4,4},{3,2},{5,1}};
@@ -28,7 +22,7 @@ class CoordinatesTest {
 
   @Test
   void getMin() {
-    int[][] coord = new int[][] {{1,4},{4,4},{3,2},{5,1}};
+    int[][] coord = new int[][] {{1,4}};
     double[][] actual = coordinates.calcDistances(coord);
     assertArrayEquals(new int[][] {{1,4},{5,1}}, actual);
   }
