@@ -1,6 +1,7 @@
 package leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MinimumSum {
@@ -32,13 +33,20 @@ public class MinimumSum {
       for (int n: tempList) {
         res += n;
       }
-      int sum = Integer.valueOf(res) + Integer.valueOf(removed);
+      int sum = sort(res) + sort(removed);
       min = Math.min(sum, min);
-      System.out.println(res + " " + removed);
+//      System.out.println(res + " " + removed);
     }
 
-    System.out.println(results);
+//    System.out.println(results);
     return min;
+  }
+
+  private int sort(String res) {
+    char[] cArray = res.toCharArray();
+    Arrays.sort(cArray);
+
+    return Integer.valueOf(new String(cArray));
   }
 
   List<List<Integer>> result = new ArrayList<>();
