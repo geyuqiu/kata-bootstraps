@@ -1,8 +1,7 @@
 package leetcode;
 
 import java.util.Arrays;
-
-import org.jetbrains.annotations.NotNull;
+import java.util.Comparator;
 
 public class PivotArray {
   int[] pivotArray(int[] nums, int pivot) {
@@ -11,7 +10,28 @@ public class PivotArray {
       items[i] = new Item(nums[i], i);
     }
 
-    Arrays.sort(items);
+    Arrays.sort(items, Comparator
+      .comparing(Item::getNum));
+    int pivotStart = 0;
+    int pivotEnd = 0;
+    for (int i = 0; i < items.length; i++) {
+      if (items[i].num == pivot) {
+        pivotStart = i;
+        break;
+      }
+    }
+    for (int i = items.length-1; i >= 0; i--) {
+      if (items[i].num == pivot) {
+        pivotEnd = i;
+        break;
+      }
+    }
+
+    Arrays.sort(items, 0, pivotStart, Comparator
+      .comparing(Item::getIndex));
+    Arrays.sort(items, pivotEnd+1, nums.length, Comparator
+      .comparing(Item::getIndex));
+
 
     int[] res = new int[nums.length];
     for (int i = 0; i < nums.length; i++) {
@@ -22,18 +42,20 @@ public class PivotArray {
   }
 }
 
-class Item implements Comparable<Item>{
+class Item{
   int num;
   int index;
+
+  public int getNum() {
+    return num;
+  }
+
+  public int getIndex() {
+    return index;
+  }
 
   public Item(int num, int index) {
     this.num = num;
     this.index = index;
-  }
-
-  @Override
-  public int compareTo(@NotNull Item i) {
-    int compareIndex = ((Item) i).index;
-    return this.index - compareIndex;
   }
 }

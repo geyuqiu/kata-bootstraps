@@ -15,7 +15,8 @@ class PivotArrayTest {
   private static Stream<Arguments>
   pivotArray() {
     return Stream.of(
-      Arguments.of(new int[]{9,12,5,10,14,3,10}, 10, new int[]{9,5,3,10,10,12,14})
+      Arguments.of(new int[]{9,12,5,10,14,3,10}, 10, new int[]{9,5,3,10,10,12,14}),
+      Arguments.of(new int[]{-3,4,3,2}, 2, new int[]{-3,2,4,3})
     );
   }
   @ParameterizedTest
