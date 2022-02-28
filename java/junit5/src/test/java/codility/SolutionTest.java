@@ -15,13 +15,15 @@ class SolutionTest {
   private static Stream<Arguments>
   solutionTest() {
     return Stream.of(
-      Arguments.of(new int[]{1,2}, 0)
+      Arguments.of(4, "abcd"),
+      Arguments.of(1, "a"),
+      Arguments.of(7, "aaabbbc")
     );
   }
   @ParameterizedTest
   @MethodSource
   void
-  solutionTest(int[] nums, String expected){
+  solutionTest(int nums, String expected){
     assertThat(solution.solution(nums))
       .isEqualTo(expected);
   }

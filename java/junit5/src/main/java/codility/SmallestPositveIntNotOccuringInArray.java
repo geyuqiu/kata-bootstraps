@@ -9,5 +9,7 @@ public class SmallestPositveIntNotOccuringInArray {
     // loop through 0..X
     // if a number does not come up, then returns it
     // otherwise return (largest number in A)+1
+
+    return 1;
   }
 }
