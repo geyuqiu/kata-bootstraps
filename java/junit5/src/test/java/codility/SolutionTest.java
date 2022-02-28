@@ -15,9 +15,11 @@ class SolutionTest {
   private static Stream<Arguments>
   solutionTest() {
     return Stream.of(
-      Arguments.of(4, "abcd"),
+      Arguments.of(4, "aaab"),
       Arguments.of(1, "a"),
-      Arguments.of(7, "aaabbbc")
+      Arguments.of(3, "aaa"),
+      Arguments.of(6, "aaaaab"),
+      Arguments.of(7, "aaaaaaa")
     );
   }
   @ParameterizedTest
