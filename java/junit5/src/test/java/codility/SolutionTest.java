@@ -15,18 +15,15 @@ class SolutionTest {
   private static Stream<Arguments>
   solutionTest() {
     return Stream.of(
-      Arguments.of(4, "aaab"),
-      Arguments.of(1, "a"),
-      Arguments.of(3, "aaa"),
-      Arguments.of(6, "aaaaab"),
-      Arguments.of(7, "aaaaaaa")
+      Arguments.of(1,3, new int[]{0,1,2,-2,3},new int[]{0,1,4,1,0}, 2),
+      Arguments.of(2,4, new int[]{4,0,1,-2},new int[]{-4,4,3,0}, 1)
     );
   }
   @ParameterizedTest
   @MethodSource
   void
-  solutionTest(int nums, String expected){
-    assertThat(solution.solution(nums))
+  solutionTest(int inner, int outer, int[] points_x, int[] points_y, int expected){
+    assertThat(solution.solution(inner, outer, points_x, points_y))
       .isEqualTo(expected);
   }
 }
