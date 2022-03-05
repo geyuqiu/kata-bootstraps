@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class GetAncestors {
   // return ancestors (of ancestors) sorted in a DAG
@@ -16,10 +17,22 @@ public class GetAncestors {
     }
     for (int i = 0; i < edges.length; i++) {
       int[] edge = edges[i];
-      graph.get(edge[1]).add(edge[0]);
+      int ancestor = edge[0];
+      HashSet<Integer> ancestors = (HashSet<Integer>) graph.get(ancestor);
+      graph.get(edge[1]).add(ancestor);
+      if (!ancestors.isEmpty()) {
+        for (int node: ancestors) {
+          graph.get(edge[1]).add(node);
+        }
+      }
     }
-    System.out.println(graph);
 
-    return new ArrayList<>();
+    List<List<Integer>> result = new ArrayList<>();
+
+    for (Map.Entry<Integer, Set<Integer>> entry: graph.entrySet()) {
+      result.add(entry.getValue().stream().collect(Collectors.toList()));
+    }
+
+    return result;
   }
 }
