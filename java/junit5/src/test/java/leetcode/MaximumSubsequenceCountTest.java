@@ -18,6 +18,8 @@ class MaximumSubsequenceCountTest {
   private static Stream<Arguments>
   getAncestorsTest() {
     return Stream.of(
+      Arguments.of("zigfj", "ju", 1),
+      Arguments.of("iuvgbmteyivbfwuospxmmgzagfa", "ti", 3),
       Arguments.of("abdcdbc", "ac", 4),
       Arguments.of("aabb", "ab", 6),
       Arguments.of("wotvvnrsqqjvgwcwayhldexdblawlmuocruhwojjbmnagepcvzumxoyoiqvihbbvgaqekmkotbkevnwjbbcfcqnozecnvpuczxbazchpshanqzzndrezfjtmweutdycvymjwnjfelbwrjfujjuzlbtbcrsymrzqgaozviecsvenpffolgxmhmtmzimgecqznhbjvdgbrlbrjvsahjuaivxueygwmwbaetpnnstuyjfeksnzigjnnhrpxxjeamprvlfmykwqrpbgybryacndkqtgnyzosxxlqdukyedtnthpoovqhlakxwwdnmjatekbenarzztahswhmblrxrvggiejclnzgyfbeujiuhjnawalagmzlqaevltutlftskbkmzivqaulwuoprnytnprdbsvhopxkyumhykortnamplmkdvwzunouhovadilrcguqxqyowkeveukakfacfjmezpaccushssotvtyxhlc",
