@@ -2,8 +2,8 @@ package codility;
 
 import java.util.Arrays;
 
-public class SmallestPositveIntNotOccuringInArray {
-  public int smallestPositveIntNotOccuringInArray(int[] A) {
+public class SmallestPositiveIntNotOccuringInArray {
+  public int smallestPositiveIntNotOccuringInArray(int[] A) {
     Arrays.sort(A);
 
     int min = 1;
