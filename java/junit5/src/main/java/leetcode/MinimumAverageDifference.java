@@ -3,33 +3,28 @@ package leetcode;
 public class MinimumAverageDifference {
   int minimumAverageDifference(int[] nums) { // returns index of minimum average difference
     int minIndex = 0;
-    int minAverageDiff = Integer.MAX_VALUE;
-    int sum = 0;
+    long minAverageDiff = Long.MAX_VALUE;
+    long sum = 0;
     int N = nums.length;
     for (int i = 0; i < N; i++) {
       sum += nums[i];
     }
 
-    int leftSum = 0;
-    int rightSum = 0;
+    long leftSum = 0L;
+    long rightSum = 0L;
     for (int i = 0; i < N; i++) { // TLE: runtime with O(n^2)
       int lefts = i+1;
       int rights = N - lefts;
 
-      for (int j = 0; j <= i; j++) {
-        leftSum += nums[j];
-      }
+      leftSum += nums[i];
       rightSum = sum - leftSum;
-      int nullable = rights == 0 ? 0 : rightSum / rights;
-      int cAverageDiff = Math.abs(leftSum / lefts - nullable);
+
+      long nullable = rights == 0 ? 0 : rightSum / rights;
+      long cAverageDiff = Math.abs(leftSum / lefts - nullable);
       if (cAverageDiff < minAverageDiff) {
         minAverageDiff = cAverageDiff;
         minIndex = i;
       }
-
-      // reset
-      leftSum = 0;
-      rightSum = 0;
     }
 
     return minIndex;
