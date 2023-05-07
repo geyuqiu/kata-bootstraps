@@ -1,67 +1,37 @@
 package leetcode;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class FirstCompleteIndex {
-  boolean[][] visited;
   Map<Integer, Coord> map = new HashMap<>();
+  int[] row;
+  int[] column;
   int x,y;
-  int firstCompleteIndexBruteForce(int[] arr, int[][] mat) { // O(A * n^2)
+  int firstCompleteIndex(int[] arr, int[][] mat) { // O(A)
     x = mat.length;
     y = mat[0].length;
-    visited = new boolean[x][y];
+    row = new int[x];
+    column = new int[y];
 
     for (int i = 0; i < x; i++) {
       for (int j = 0; j < y; j++) {
-        visited[i][j] = false;
         map.put(mat[i][j], new Coord(i,j));
       }
     }
 
     for (int i = 0; i < arr.length; i++) {
       Coord coord = (Coord) map.get(arr[i]);
-      visited[coord.x][coord.y] = true;
-      if (oneRowOrColumnFilled()) return i;
+      row[coord.x]++;
+      column[coord.y]++;
+
+      if(row[coord.x] == y || column[coord.y] == x) {
+        return i;
+      }
     }
     return -1;
-  }
-
-  private boolean oneRowOrColumnFilled() { // O(n^2)
-    if (oneRowFilled() || oneColumnFilled()) return true;
-    return false;
-  }
-
-  private boolean oneColumnFilled() {
-    for (int j = 0; j < y; j++) {
-      boolean temp = true;
-      for (int i = 0; i < x; i++) {
-        if (!visited[i][j])  {
-          temp = false;
-          continue;
-        }
-      }
-      if (temp) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  private boolean oneRowFilled() {
-    for (int i = 0; i < x; i++) {
-      boolean temp = true;
-      for (int j = 0; j < y; j++) {
-        if (!visited[i][j])  {
-          temp = false;
-          break;
-        }
-      }
-      if (temp) {
-        return true;
-      }
-    }
-    return false;
   }
 
   class Coord {

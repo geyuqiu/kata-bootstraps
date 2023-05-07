@@ -18,6 +18,13 @@ class FirstCompleteIndexTest {
   findMaxFish() {
     return Stream.of(
       Arguments.of(
+        new int[]{1,4,5,2,6,3},
+        new int[][]{
+          {4,3,5},
+          {1,2,6},
+        }, 1
+      ),
+      Arguments.of(
         new int[]{2,8,7,4,1,3,5,6,9},
         new int[][]{
           {3,2,5},
