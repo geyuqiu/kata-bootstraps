@@ -4,31 +4,39 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FrequencyTracker {
-    Map<Integer, Integer> f;
+    Map<Integer, Integer> map;
+    int[] f = new int[1000000];
     public FrequencyTracker() {
-        f = new HashMap<>();
+        map = new HashMap<>();
     }
 
-    public void add(int number) { // O(1)
-        if (f.containsKey(number)) f.replace(number, f.get(number) + 1);
-        else f.put(number, 1);
+    public void add(int number) {
+        if (map.containsKey(number)) {
+            int occurence = map.get(number);
+            map.replace(number, occurence + 1);
+            f[occurence]--;
+            f[occurence+1]++;
+        } else {
+            map.put(number, 1);
+            f[1]++;
+        }
     }
 
-    public void deleteOne(int number) { // O(1)
-        if (f.containsKey(number)) {
-            if ( f.get(number) > 1) {
-                f.replace(number, f.get(number) - 1);
+    public void deleteOne(int number) {
+        if (map.containsKey(number)) {
+            if ( map.get(number) > 1) {
+                int occurence = map.get(number);
+                map.replace(number, occurence - 1);
+                f[occurence]--;
+                f[occurence-1]++;
             } else {
-                f.remove(number);
+                map.remove(number);
+                f[1]--;
             }
         }
     }
 
-    public boolean hasFrequency(int frequency) { // O(op) takes it short to ask every time ?
-        for(Map.Entry<Integer, Integer> entry: f.entrySet()) {
-            int occurrence = entry.getValue();
-            if (occurrence > 0 && occurrence == frequency ) return true;
-        }
-        return false;
+    public boolean hasFrequency(int frequency) { // O(1)
+        return f[frequency] > 0;
     }
 }
