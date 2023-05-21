@@ -25,7 +25,6 @@ public class MinIncrements {
         int rightSum = postOrderTraversal(root.right);
 
         increment += Math.abs(leftSum - rightSum);
-
         return Math.max(leftSum, rightSum) + root.val;
     }
 }
